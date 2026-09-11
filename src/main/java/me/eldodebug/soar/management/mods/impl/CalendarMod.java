@@ -20,8 +20,7 @@ public class CalendarMod extends HUDMod {
 	public CalendarMod() {
 		super(Icons.CALENDAR_LTR_24, TranslateText.CALENDAR, TranslateText.CALENDAR_DESCRIPTION, "", false);
 	}
-
-	//TODO: fix the weird offset
+	
 	@EventTarget
 	public void onRender2D(EventNVG event) {
 		Calendar calendar = Calendar.getInstance();
@@ -60,7 +59,7 @@ public class CalendarMod extends HUDMod {
 		for(int i = 1; i <= maxDay; i++) {
 			
 			if(i == day) {
-				this.drawRoundedRect(4.5F + offsetX, 30.5F + offsetY, 10F, 10F, 10F / 2);
+				this.drawRoundedRect(5F + offsetX, 30.5F + offsetY, 10F, 10F, 10F / 2);
 			}
 			
 			this.drawCenteredText(String.valueOf(i), 10 + offsetX, 33 + offsetY + 3, 6, getHudFont(1), i == day ? currentColor.getInterpolateColor() : this.getFontColor());
