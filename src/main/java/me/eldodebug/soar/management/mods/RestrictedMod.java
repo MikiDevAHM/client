@@ -1,6 +1,6 @@
 package me.eldodebug.soar.management.mods;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.notification.NotificationType;
 import me.eldodebug.soar.management.remote.blacklists.BlacklistManager;
 import me.eldodebug.soar.management.remote.blacklists.Server;

@@ -2,10 +2,8 @@ package me.eldodebug.soar.management.file;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Logger;
 
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.logger.GlideLogger;
 import net.minecraft.client.Minecraft;
 

@@ -1,10 +1,9 @@
 package me.eldodebug.soar.management.mods.impl;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
-import me.eldodebug.soar.management.notification.Notification;
 import me.eldodebug.soar.management.notification.NotificationType;
 
 public class Items2DMod extends Mod {

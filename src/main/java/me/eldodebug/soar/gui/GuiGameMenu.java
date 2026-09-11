@@ -1,18 +1,16 @@
 package me.eldodebug.soar.gui;
 
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
-import me.eldodebug.soar.utils.MathUtils;
 import me.eldodebug.soar.utils.animation.normal.Animation;
 import me.eldodebug.soar.utils.animation.normal.Direction;
 import me.eldodebug.soar.utils.animation.normal.easing.EaseLiner;
 import me.eldodebug.soar.utils.buffer.ScreenAnimation;
 import me.eldodebug.soar.utils.mouse.MouseUtils;
-import me.eldodebug.soar.utils.render.BlurUtils;
 import net.minecraft.client.gui.*;
 import net.minecraft.client.gui.achievement.GuiAchievements;
 import net.minecraft.client.gui.achievement.GuiStats;

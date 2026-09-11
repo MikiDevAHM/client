@@ -28,7 +28,7 @@ public class GlideTweaker implements ITweaker {
 			Class.forName("optifine.Patcher");
 			hasOptifine = true;
 		}
-		catch(ClassNotFoundException e) {
+		catch(ClassNotFoundException ignored) {
 		}
 		
         this.launchArguments.addAll(args);
@@ -85,6 +85,6 @@ public class GlideTweaker implements ITweaker {
             transformerExceptions.setAccessible(true);
             Object o = transformerExceptions.get(Launch.classLoader);
             ((Set<String>) o).remove("org.lwjgl.");
-        } catch (NoSuchFieldException | IllegalAccessException e) {}
+        } catch (NoSuchFieldException | IllegalAccessException ignored) {}
     }
 }

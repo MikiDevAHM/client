@@ -1,6 +1,5 @@
 package me.eldodebug.soar.management.mods.impl;
 
-import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.*;
 import me.eldodebug.soar.management.language.TranslateText;
@@ -8,7 +7,6 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.impl.rearview.RearviewCamera;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
-import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.utils.TimerUtils;
 
 public class RearviewMod extends HUDMod {

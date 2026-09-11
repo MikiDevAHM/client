@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.mainmenu.impl.UpdateScene;
 import me.eldodebug.soar.gui.mainmenu.impl.welcome.*;
 import me.eldodebug.soar.gui.mainmenu.widget.WidgetMenuIconButton;
@@ -14,7 +14,7 @@ import me.eldodebug.soar.types.Size;
 import me.eldodebug.soar.utils.Sound;
 import org.lwjgl.input.Mouse;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.mainmenu.impl.BackgroundScene;
 import me.eldodebug.soar.gui.mainmenu.impl.MainScene;
 import me.eldodebug.soar.management.event.impl.EventRenderNotification;
@@ -76,7 +76,7 @@ public class GuiGlideMainMenu extends GuiScreen {
         scenes.add(new UpdateScene(this));
 
         if (instance.isFirstLogin()) {
-            mc.gameSettings.useVbo = true;
+            //mc.gameSettings.useVbo = true;
             currentScene = getSceneByClass(WelcomeMessageScene.class);
         } else {
             if (instance.getUpdateNeeded()) {

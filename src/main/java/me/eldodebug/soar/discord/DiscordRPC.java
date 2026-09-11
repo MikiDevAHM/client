@@ -2,8 +2,7 @@ package me.eldodebug.soar.discord;
 
 import java.time.OffsetDateTime;
 
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.discord.ipc.IPCClient;
 import me.eldodebug.soar.discord.ipc.IPCListener;
 import me.eldodebug.soar.discord.ipc.entities.RichPresence;

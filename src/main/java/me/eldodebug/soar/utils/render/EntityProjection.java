@@ -1,20 +1,16 @@
 package me.eldodebug.soar.utils.render;
 
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.injection.interfaces.IMixinRenderManager;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
-import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.event.impl.EventRender3D;
 import me.eldodebug.soar.types.Rect;
 import me.eldodebug.soar.utils.proj.Projection;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import static me.eldodebug.soar.utils.proj.Projection.VIEWPORT;

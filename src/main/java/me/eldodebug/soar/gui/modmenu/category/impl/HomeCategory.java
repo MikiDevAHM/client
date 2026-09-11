@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Desktop;
 import java.net.URL;
 
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.Glide;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.modmenu.GuiModMenu;
 import me.eldodebug.soar.gui.modmenu.category.Category;
 import me.eldodebug.soar.management.remote.changelog.Changelog;

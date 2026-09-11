@@ -1,6 +1,6 @@
 package me.eldodebug.soar.gui.gamemenus.backgrounds.impl;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
