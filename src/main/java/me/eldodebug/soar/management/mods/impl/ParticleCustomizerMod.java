@@ -7,6 +7,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,7 +25,7 @@ public class ParticleCustomizerMod extends Mod {
 	private NumberSetting criticalsAmountSetting = new NumberSetting(TranslateText.CRITICALS_AMOUNT, this, 2, 1, 10, true);
 	
 	public ParticleCustomizerMod() {
-		super(TranslateText.PARTICLE_CUSTOMIZER, TranslateText.PARTICLE_CUSTOMIZER_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.VIDEO_PERSON_SPARKLE_24, TranslateText.PARTICLE_CUSTOMIZER, TranslateText.PARTICLE_CUSTOMIZER_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

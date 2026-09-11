@@ -11,6 +11,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ColorSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 import me.eldodebug.soar.utils.Render3DUtils;
 import me.eldodebug.soar.utils.TargetUtils;
@@ -22,7 +23,7 @@ public class TargetIndicatorMod extends Mod {
 	private ColorSetting colorSetting = new ColorSetting(TranslateText.COLOR, this, Color.RED, false);
     
 	public TargetIndicatorMod() {
-		super(TranslateText.TARGET_INDICATOR, TranslateText.TARGET_INDICATOR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.HIGHLIGHT_24, TranslateText.TARGET_INDICATOR, TranslateText.TARGET_INDICATOR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

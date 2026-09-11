@@ -5,11 +5,12 @@ import me.eldodebug.soar.management.event.impl.EventGamma;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class FullbrightMod extends Mod {
 
 	public FullbrightMod() {
-		super(TranslateText.FULLBRIGHT, TranslateText.FULLBRIGHT_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.FLASHLIGHT_24, TranslateText.FULLBRIGHT, TranslateText.FULLBRIGHT_DESCRIPTION, ModCategory.PLAYER, "nightvision", false);
 	}
 
 	@EventTarget

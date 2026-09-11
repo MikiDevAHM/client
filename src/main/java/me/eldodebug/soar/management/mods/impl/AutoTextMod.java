@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -20,7 +21,7 @@ public class AutoTextMod extends Mod {
 	private TextSetting text3Setting = new TextSetting(TranslateText.TEXT_3, this, "");
 	
 	public AutoTextMod() {
-		super(TranslateText.AUTO_TEXT, TranslateText.AUTO_TEXT_DESCRIPTION, ModCategory.PLAYER,"messagetexthotkeymacro");
+		super(Icons.TEXT_ADD_T_24,TranslateText.AUTO_TEXT, TranslateText.AUTO_TEXT_DESCRIPTION, ModCategory.PLAYER,"messagetexthotkeymacro", false);
 	}
 
 	@EventTarget

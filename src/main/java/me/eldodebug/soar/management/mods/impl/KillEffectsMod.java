@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import me.eldodebug.soar.Glide;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.injection.interfaces.IMixinRenderManager;
@@ -47,7 +48,7 @@ public class KillEffectsMod extends Mod {
 	private NumberSetting multiplierSetting = new NumberSetting(TranslateText.MULTIPLIER, this, 1, 1, 10, true);
 
 	public KillEffectsMod() {
-		super(TranslateText.KILL_EFFECTS, TranslateText.KILL_EFFECTS_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.MATH_FORMULA_24, TranslateText.KILL_EFFECTS, TranslateText.KILL_EFFECTS_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

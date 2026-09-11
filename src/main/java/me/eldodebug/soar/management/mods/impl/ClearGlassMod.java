@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class ClearGlassMod extends Mod {
 	
@@ -17,7 +18,7 @@ public class ClearGlassMod extends Mod {
 	private boolean prevNormal, prevStained;
 	
 	public ClearGlassMod() {
-		super(TranslateText.CLEAR_GLASS, TranslateText.CLEAR_GLASS_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.SLIDE_ERASER_24, TranslateText.CLEAR_GLASS, TranslateText.CLEAR_GLASS_DESCRIPTION, ModCategory.RENDER, "", false);
 		
 		instance = this;
 	}

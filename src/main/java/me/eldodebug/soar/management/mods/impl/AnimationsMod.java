@@ -5,6 +5,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class AnimationsMod extends Mod {
 
@@ -23,7 +24,7 @@ public class AnimationsMod extends Mod {
 	private BooleanSetting rodSetting = new BooleanSetting(TranslateText.ROD, this, false);
 
 	public AnimationsMod() {
-		super(TranslateText.OLD_ANIMATION, TranslateText.OLD_ANIMATION_DESCRIPTION, ModCategory.RENDER, "oldoam1.7smoothsneak");
+		super(Icons.FAST_ACCELERATION_24,TranslateText.OLD_ANIMATION, TranslateText.OLD_ANIMATION_DESCRIPTION, ModCategory.RENDER, "oldoam1.7smoothsneak", false);
 		
 		instance = this;
 	}

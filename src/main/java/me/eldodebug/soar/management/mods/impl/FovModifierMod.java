@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.PlayerUtils;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -22,7 +23,7 @@ public class FovModifierMod extends Mod {
 	private NumberSetting slownessSetting = new NumberSetting(TranslateText.SLOWNESS, this, 1, -5, 5, false);
 	
 	public FovModifierMod() {
-		super(TranslateText.FOV_MODIFIER, TranslateText.FOV_MODIFIER_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.DUAL_SCREEN_VERTICAL_SCROLL_24, TranslateText.FOV_MODIFIER, TranslateText.FOV_MODIFIER_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 
 	@EventTarget

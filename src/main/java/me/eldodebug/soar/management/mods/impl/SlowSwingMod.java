@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class SlowSwingMod extends Mod {
 
@@ -12,7 +13,7 @@ public class SlowSwingMod extends Mod {
 	private NumberSetting delaySetting = new NumberSetting(TranslateText.DELAY, this, 14, 2, 20, true);
 	
 	public SlowSwingMod() {
-		super(TranslateText.SLOW_SWING, TranslateText.SLOW_SWING_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.ANIMAL_TURTLE_24, TranslateText.SLOW_SWING, TranslateText.SLOW_SWING_DESCRIPTION, ModCategory.PLAYER, "", false);
 		
 		instance = this;
 	}

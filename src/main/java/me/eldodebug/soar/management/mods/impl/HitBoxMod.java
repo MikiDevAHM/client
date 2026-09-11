@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.awt.Color;
 
 import me.eldodebug.soar.management.mods.settings.impl.ColorSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.entity.item.EntityArmorStand;
 import org.lwjgl.opengl.GL11;
 
@@ -36,7 +37,7 @@ public class HitBoxMod extends Mod {
 	private NumberSetting lineWidthSetting = new NumberSetting(TranslateText.LINE_WIDTH, this, 2, 1, 5, true);
 	
 	public HitBoxMod() {
-		super(TranslateText.HITBOX, TranslateText.HITBOX_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.MAXIMIZE_24, TranslateText.HITBOX, TranslateText.HITBOX_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.awt.Color;
 import java.util.Iterator;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -23,7 +24,7 @@ public class ReachCirclesMod extends Mod {
 	private NumberSetting lineWidthSetting = new NumberSetting(TranslateText.LINE_WIDTH, this, 2, 1, 5, true);
 	
 	public ReachCirclesMod() {
-		super(TranslateText.REACH_CIRCLES, TranslateText.REACH_CIRCLES_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.PHOTO_FILTER_24, TranslateText.REACH_CIRCLES, TranslateText.REACH_CIRCLES_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 	
 	@EventTarget

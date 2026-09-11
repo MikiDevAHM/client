@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ServerUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityArmorStand;
@@ -21,7 +22,7 @@ public class FPSBoostMod extends Mod {
 	private BooleanSetting removeBotSetting = new BooleanSetting(TranslateText.REMOVE_BOT, this, false);
 	
 	public FPSBoostMod() {
-		super(TranslateText.FPS_BOOST, TranslateText.FPS_BOOST_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.FPS_960_24, TranslateText.FPS_BOOST, TranslateText.FPS_BOOST_DESCRIPTION, ModCategory.OTHER, "framespatcherperformance", false);
 		
 		instance = this;
 	}

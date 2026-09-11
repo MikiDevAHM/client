@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.util.vector.Vector3f;
 
 import me.eldodebug.soar.injection.interfaces.IMixinMinecraft;
@@ -37,7 +38,7 @@ public class MoBendsMod extends Mod {
 	private ColorSetting colorSetting = new ColorSetting(TranslateText.COLOR, this, Color.RED, false);
 	
 	public MoBendsMod() {
-		super(TranslateText.MO_BENDS, TranslateText.MO_BENDS_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.GESTURE_24, TranslateText.MO_BENDS, TranslateText.MO_BENDS_DESCRIPTION, ModCategory.PLAYER, "", false);
 		
 		instance = this;
 		loaded = false;

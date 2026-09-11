@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.event.impl.EventTick;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.util.MathHelper;
 
 public class MouseStrokesMod extends HUDMod {
@@ -16,7 +17,7 @@ public class MouseStrokesMod extends HUDMod {
     private float mouseX, mouseY, lastMouseX, lastMouseY;
 
     public MouseStrokesMod() {
-        super(TranslateText.MOUSE_STROKES, TranslateText.MOUSE_STROKES_DESCRIPTION);
+        super(Icons.CURSOR_HOVER_24, TranslateText.MOUSE_STROKES, TranslateText.MOUSE_STROKES_DESCRIPTION, "", false);
     }
 
     @EventTarget

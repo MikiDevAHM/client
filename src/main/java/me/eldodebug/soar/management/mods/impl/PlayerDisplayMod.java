@@ -5,6 +5,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -16,7 +17,7 @@ public class PlayerDisplayMod extends HUDMod {
 	private NumberSetting yawOffsetSetting = new NumberSetting(TranslateText.YAW_OFFSET, this, 0, -90, 120, true);
 	
 	public PlayerDisplayMod() {
-		super(TranslateText.PLAYER_DISPLAY, TranslateText.PLAYER_DISPLAY_DESCRIPTION, "paperdoll");
+		super(Icons.PERSON_BOARD_24, TranslateText.PLAYER_DISPLAY, TranslateText.PLAYER_DISPLAY_DESCRIPTION, "paperdoll", false);
 	}
 
 	@EventTarget

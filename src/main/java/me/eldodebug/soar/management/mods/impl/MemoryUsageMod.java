@@ -14,6 +14,7 @@ import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 
@@ -26,7 +27,7 @@ public class MemoryUsageMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public MemoryUsageMod() {
-		super(TranslateText.MEMORY_USAGE, TranslateText.MEMORY_USAGE_DESCRIPTION);
+		super(Icons.MEMORY_16, TranslateText.MEMORY_USAGE, TranslateText.MEMORY_USAGE_DESCRIPTION, "", false);
 	}
 
 	@EventTarget
@@ -47,8 +48,8 @@ public class MemoryUsageMod extends SimpleHUDMod {
 		animation.setAnimation(((this.getUsingMemory() / 100F) * 360), 16);
 		
 		this.drawBackground(54, 60);
-		this.drawCenteredText("Memory", 54 / 2, 6, 9, getHudFont(1));
-		this.drawCenteredText(this.getUsingMemory() + "%", 54 / 2, 32, 9, getHudFont(1));
+		this.drawCenteredText("Memory", 27, 9, 9, getHudFont(1));
+		this.drawCenteredText(this.getUsingMemory() + "%", 27, 36F, 9, getHudFont(1));
 
 		this.drawArc(27, 35.5F, 16.5F, -90, 360, 1.6F, this.getFontColor(120));
 		this.drawArc(27, 35.5F, 16.5F, -90, animation.getValue() - 90, 1.6F, this.getFontColor());

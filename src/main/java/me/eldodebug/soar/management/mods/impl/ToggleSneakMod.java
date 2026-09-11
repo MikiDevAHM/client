@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventUpdate;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.settings.KeyBinding;
 
@@ -14,7 +15,7 @@ public class ToggleSneakMod extends Mod {
 	private boolean toggle;
 	
 	public ToggleSneakMod() {
-		super(TranslateText.TOGGLE_SNEAK, TranslateText.TOGGLE_SNEAK_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.KEYBOARD_SHIFT_24, TranslateText.TOGGLE_SNEAK, TranslateText.TOGGLE_SNEAK_DESCRIPTION, ModCategory.PLAYER, "sprint", false);
 	}
 
 	@Override

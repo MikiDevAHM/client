@@ -19,29 +19,9 @@ public class Mod {
     private ModCategory category;
     private String alias = "\u200B"; // zerowidth space
     private Boolean restricted = false, allowed = true;
+    private String icon = "";
 
-    public Mod(TranslateText nameTranslate, TranslateText descriptionTranslate, ModCategory category) {
-
-        this.nameTranslate = nameTranslate;
-        this.descriptionTranslate = descriptionTranslate;
-        this.toggled = false;
-        this.category = category;
-
-        this.setup();
-    }
-
-    public Mod(TranslateText nameTranslate, TranslateText descriptionTranslate, ModCategory category, String alias) {
-
-        this.nameTranslate = nameTranslate;
-        this.descriptionTranslate = descriptionTranslate;
-        this.toggled = false;
-        this.category = category;
-        this.alias = alias;
-
-        this.setup();
-    }
-
-    public Mod(TranslateText nameTranslate, TranslateText descriptionTranslate, ModCategory category, String alias, boolean restricted) {
+    public Mod(String icon, TranslateText nameTranslate, TranslateText descriptionTranslate, ModCategory category, String alias, boolean restricted) {
 
         this.nameTranslate = nameTranslate;
         this.descriptionTranslate = descriptionTranslate;
@@ -49,6 +29,7 @@ public class Mod {
         this.category = category;
         this.alias = alias;
         this.restricted = restricted;
+        this.icon = icon;
 
         this.setup();
     }

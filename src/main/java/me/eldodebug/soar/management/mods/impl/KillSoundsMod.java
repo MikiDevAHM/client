@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.mods.settings.impl.SoundSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.Sound;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
@@ -30,7 +31,7 @@ public class KillSoundsMod extends Mod {
 	private SoundSetting soundSetting = new SoundSetting(TranslateText.SOUND, this);
 	
 	public KillSoundsMod() {
-		super(TranslateText.KILL_SOUNDS, TranslateText.KILL_SOUNDS_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.HEADPHONES_SOUND_WAVE_24, TranslateText.KILL_SOUNDS, TranslateText.KILL_SOUNDS_DESCRIPTION, ModCategory.OTHER, "oof", false);
 	}
 
 	@EventTarget

@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class AsyncScreenshotMod extends Mod {
 
@@ -13,7 +14,7 @@ public class AsyncScreenshotMod extends Mod {
 	private BooleanSetting clipboardSetting = new BooleanSetting(TranslateText.CLIPBOARD, this, false);
 	
 	public AsyncScreenshotMod() {
-		super(TranslateText.ASYNC_SCREENSHOT, TranslateText.ASYNC_SCREENSHOT_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.SCREENSHOT_24, TranslateText.ASYNC_SCREENSHOT, TranslateText.ASYNC_SCREENSHOT_DESCRIPTION, ModCategory.OTHER, "patcher", false);
 		
 		instance = this;
 	}

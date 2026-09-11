@@ -10,6 +10,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.chunk.RenderChunk;
 
@@ -20,7 +21,7 @@ public class ChunkAnimatorMod extends Mod {
 	private NumberSetting duration = new NumberSetting(TranslateText.DURATION, this, 1, 0, 5, true);
 	
 	public ChunkAnimatorMod() {
-		super(TranslateText.CHUNK_ANIMATOR, TranslateText.CHUNK_ANIMATOR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.SUB_GRID_24, TranslateText.CHUNK_ANIMATOR, TranslateText.CHUNK_ANIMATOR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

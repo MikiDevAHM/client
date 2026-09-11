@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -13,7 +14,7 @@ public class EarsMod extends Mod {
 	private static EarsMod instance;
 
 	public EarsMod() {
-		super(TranslateText.EARS, TranslateText.EARS_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.DUAL_SCREEN_MIRROR_24, TranslateText.EARS, TranslateText.EARS_DESCRIPTION, ModCategory.PLAYER, "cosmetic", false);
 
 		instance = this;
 	}

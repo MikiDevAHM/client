@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.utils.ServerUtils;
 
@@ -14,7 +15,7 @@ public class PingDisplayMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public PingDisplayMod() {
-		super(TranslateText.PING_DISPLAY, TranslateText.PING_DISPLAY_DESCRIPTION);
+		super(Icons.NETWORK_CHECK_24, TranslateText.PING_DISPLAY, TranslateText.PING_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

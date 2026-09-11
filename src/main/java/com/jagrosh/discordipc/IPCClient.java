@@ -1,4 +1,4 @@
-package me.eldodebug.soar.discord.ipc;
+package com.jagrosh.discordipc;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -10,15 +10,15 @@ import org.apache.logging.log4j.Logger;
 
 import com.google.gson.JsonObject;
 
-import me.eldodebug.soar.discord.ipc.entities.Callback;
-import me.eldodebug.soar.discord.ipc.entities.DiscordBuild;
-import me.eldodebug.soar.discord.ipc.entities.Packet;
-import me.eldodebug.soar.discord.ipc.entities.Packet.OpCode;
-import me.eldodebug.soar.discord.ipc.entities.RichPresence;
-import me.eldodebug.soar.discord.ipc.entities.User;
-import me.eldodebug.soar.discord.ipc.entities.pipe.Pipe;
-import me.eldodebug.soar.discord.ipc.entities.pipe.PipeStatus;
-import me.eldodebug.soar.discord.ipc.exceptions.NoDiscordClientException;
+import com.jagrosh.discordipc.entities.Callback;
+import com.jagrosh.discordipc.entities.DiscordBuild;
+import com.jagrosh.discordipc.entities.Packet;
+import com.jagrosh.discordipc.entities.Packet.OpCode;
+import com.jagrosh.discordipc.entities.RichPresence;
+import com.jagrosh.discordipc.entities.User;
+import com.jagrosh.discordipc.entities.pipe.Pipe;
+import com.jagrosh.discordipc.entities.pipe.PipeStatus;
+import com.jagrosh.discordipc.exceptions.NoDiscordClientException;
 
 public final class IPCClient implements Closeable {
 	

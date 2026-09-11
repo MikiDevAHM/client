@@ -24,30 +24,9 @@ public class HUDMod extends Mod {
 	private float scale;
 	private boolean dragging, draggable;
 
-	public HUDMod(TranslateText nameTranslate, TranslateText descriptionText) {
-		super(nameTranslate, descriptionText, ModCategory.HUD);
 
-		this.x = 100;
-		this.y = 100;
-		this.width = 100;
-		this.height = 100;
-		this.scale = 1.0F;
-		this.draggable = true;
-	}
-
-	public HUDMod(TranslateText nameTranslate, TranslateText descriptionText, String alias) {
-		super(nameTranslate, descriptionText, ModCategory.HUD, alias);
-
-		this.x = 100;
-		this.y = 100;
-		this.width = 100;
-		this.height = 100;
-		this.scale = 1.0F;
-		this.draggable = true;
-	}
-
-	public HUDMod(TranslateText nameTranslate, TranslateText descriptionText, String alias, boolean restricted) {
-		super(nameTranslate, descriptionText, ModCategory.HUD, alias, restricted);
+	public HUDMod(String icon, TranslateText nameTranslate, TranslateText descriptionText, String alias, boolean restricted) {
+		super(icon, nameTranslate, descriptionText, ModCategory.HUD, alias, restricted);
 
 		this.x = 100;
 		this.y = 100;

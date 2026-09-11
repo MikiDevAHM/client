@@ -18,6 +18,7 @@ import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class ArrayListMod extends HUDMod {
 
@@ -33,7 +34,7 @@ public class ArrayListMod extends HUDMod {
 	
 	
 	public ArrayListMod() {
-		super(TranslateText.ARRAY_LIST, TranslateText.ARRAY_LIST_DESCRIPTION);
+		super(Icons.TEXT_NUMBER_LIST_RTL_24, TranslateText.ARRAY_LIST, TranslateText.ARRAY_LIST_DESCRIPTION, "modlistdisplay", false);
 	}
 
 	@EventTarget

@@ -10,6 +10,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityHorse;
 
@@ -18,7 +19,7 @@ public class HorseStatsMod extends HUDMod {
 	private DecimalFormat df = new DecimalFormat("0.0");
 	
 	public HorseStatsMod() {
-		super(TranslateText.HORSE_STATS, TranslateText.HORSE_STATS_DESCRIPTION);
+		super(Icons.STATUS_24, TranslateText.HORSE_STATS, TranslateText.HORSE_STATS_DESCRIPTION, "", false);
 	}
 	
 	@EventTarget

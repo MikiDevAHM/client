@@ -2,6 +2,7 @@ package me.eldodebug.soar.management.mods.impl;
 
 import java.awt.Color;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -18,7 +19,7 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 public class ChunkBordersMod extends Mod {
 
 	public ChunkBordersMod() {
-		super(TranslateText.CHUNK_BORDERS, TranslateText.CHUNK_BORDERS_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.BORDER_NONE_24, TranslateText.CHUNK_BORDERS, TranslateText.CHUNK_BORDERS_DESCRIPTION, ModCategory.RENDER, "boundaries", false);
 	}
 
 	@EventTarget

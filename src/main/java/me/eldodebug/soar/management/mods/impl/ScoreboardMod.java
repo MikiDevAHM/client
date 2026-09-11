@@ -16,6 +16,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.render.RenderUtils;
@@ -35,7 +36,7 @@ public class ScoreboardMod extends HUDMod {
 	private BooleanSetting shadowSetting = new BooleanSetting(TranslateText.SHADOW, this, false);
 	
 	public ScoreboardMod() {
-		super(TranslateText.SCOREBOARD, TranslateText.SCOREBOARD_DESCRIPTION);
+		super(Icons.TEXT_WORD_COUNT_24, TranslateText.SCOREBOARD, TranslateText.SCOREBOARD_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

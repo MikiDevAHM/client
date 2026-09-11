@@ -2,6 +2,7 @@ package me.eldodebug.soar.management.mods.impl;
 
 import java.text.DecimalFormat;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -29,7 +30,7 @@ public class SpeedometerMod extends SimpleHUDMod {
 	private DecimalFormat speedFormat = new DecimalFormat("0.00");
 	
 	public SpeedometerMod() {
-		super(TranslateText.SPEEDOMETER, TranslateText.SPEEDOMETER_DESCRIPTION);
+		super(Icons.TOP_SPEED_24, TranslateText.SPEEDOMETER, TranslateText.SPEEDOMETER_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

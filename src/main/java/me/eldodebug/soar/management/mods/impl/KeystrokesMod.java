@@ -1,6 +1,7 @@
 package me.eldodebug.soar.management.mods.impl;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.Glide;
@@ -23,7 +24,7 @@ public class KeystrokesMod extends HUDMod {
 	private SimpleAnimation[] animations = new SimpleAnimation[5];
 	
 	public KeystrokesMod() {
-		super(TranslateText.KEYSTROKES, TranslateText.KEYSTROKES_DESCRIPTION);
+		super(Icons.KEYBOARD_24, TranslateText.KEYSTROKES, TranslateText.KEYSTROKES_DESCRIPTION, "", false);
 		
 	    for (int i = 0; i < 5; i++) {
 	        animations[i] = new SimpleAnimation();

@@ -7,6 +7,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 
 public class PlayTimeDisplayMod extends SimpleHUDMod {
@@ -14,7 +15,7 @@ public class PlayTimeDisplayMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 
 	public PlayTimeDisplayMod() {
-		super(TranslateText.PLAY_TIME_DISPLAY, TranslateText.PLAY_TIME_DISPLAY_DESCRIPTION);
+		super(Icons.ACCESS_TIME_24, TranslateText.PLAY_TIME_DISPLAY, TranslateText.PLAY_TIME_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

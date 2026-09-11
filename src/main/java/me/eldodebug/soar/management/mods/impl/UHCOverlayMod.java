@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class UHCOverlayMod extends Mod {
 
@@ -16,7 +17,7 @@ public class UHCOverlayMod extends Mod {
 	private NumberSetting skullScaleSetting = new NumberSetting(TranslateText.SKULL_SCALE, this, 1.5F, 1.0F, 5.0F, false);
 	
 	public UHCOverlayMod() {
-		super(TranslateText.UHC_OVERLAY, TranslateText.UHC_OVERLAY_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.FOOD_APPLE_24, TranslateText.UHC_OVERLAY, TranslateText.UHC_OVERLAY_DESCRIPTION, ModCategory.RENDER, "", false);
 		
 		instance = this;
 	}

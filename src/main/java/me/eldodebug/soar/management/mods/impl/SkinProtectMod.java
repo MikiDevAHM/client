@@ -7,12 +7,13 @@ import me.eldodebug.soar.management.event.impl.EventLocationSkin;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.util.ResourceLocation;
 
 public class SkinProtectMod extends Mod {
 
 	public SkinProtectMod() {
-		super(TranslateText.SKIN_PROTECT, TranslateText.SKIN_PROTECT_DESCRIPTION, ModCategory.PLAYER, "nickhider");
+		super(Icons.PERSON_LOCK_24, TranslateText.SKIN_PROTECT, TranslateText.SKIN_PROTECT_DESCRIPTION, ModCategory.PLAYER, "nickhider", false);
 	}
 	
 	@EventTarget

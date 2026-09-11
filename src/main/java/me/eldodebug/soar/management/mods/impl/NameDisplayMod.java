@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 
 public class NameDisplayMod extends SimpleHUDMod {
@@ -18,7 +19,7 @@ public class NameDisplayMod extends SimpleHUDMod {
 			new Option(TranslateText.NAME), new Option(TranslateText.IGN))));
 	
 	public NameDisplayMod() {
-		super(TranslateText.NAME_DISPLAY, TranslateText.NAME_DISPLAY_DESCRIPTION);
+		super(Icons.TAG_24, TranslateText.NAME_DISPLAY, TranslateText.NAME_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@Override

@@ -5,6 +5,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class FPSLimiterMod extends Mod {
 
@@ -16,7 +17,7 @@ public class FPSLimiterMod extends Mod {
 	private NumberSetting guiFpsSetting = new NumberSetting(TranslateText.GUI_FPS, this, 30, 1, 240, true);
 	
 	public FPSLimiterMod() {
-		super(TranslateText.FPS_LIMITER, TranslateText.FPS_LIMITER_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.LOCK_MULTIPLE_24, TranslateText.FPS_LIMITER, TranslateText.FPS_LIMITER_DESCRIPTION, ModCategory.OTHER, "", false);
 		
 		instance = this;
 	}

@@ -2,6 +2,7 @@ package me.eldodebug.soar.management.mods.impl;
 
 import java.awt.Color;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
@@ -26,7 +27,7 @@ public class WaypointMod extends Mod {
 	private KeybindSetting keybindSetting = new KeybindSetting(TranslateText.KEYBIND, this, Keyboard.KEY_B);
 	
 	public WaypointMod() {
-		super(TranslateText.WAYPOINT, TranslateText.WAYPOINT_DESCRIPTION, ModCategory.WORLD);
+		super(Icons.LOCATION_LIVE_24, TranslateText.WAYPOINT, TranslateText.WAYPOINT_DESCRIPTION, ModCategory.WORLD,"", false);
 	}
 
 	@EventTarget

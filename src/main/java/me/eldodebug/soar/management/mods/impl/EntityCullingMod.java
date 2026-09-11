@@ -8,6 +8,7 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL33;
@@ -51,7 +52,7 @@ public class EntityCullingMod extends Mod {
     private NumberSetting distanceSetting = new NumberSetting(TranslateText.DISTANCE, this, 45, 10, 150, true);
     
 	public EntityCullingMod() {
-		super(TranslateText.ENTITY_CULLING, TranslateText.ENTITY_CULLING_DESCRIPTIONN, ModCategory.OTHER);
+		super(Icons.INPRIVATE_ACCOUNT_24, TranslateText.ENTITY_CULLING, TranslateText.ENTITY_CULLING_DESCRIPTIONN, ModCategory.OTHER, "fpsperformance", false);
 	}
 
     @EventTarget

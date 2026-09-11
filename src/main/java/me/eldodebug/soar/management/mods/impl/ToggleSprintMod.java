@@ -1,6 +1,7 @@
 package me.eldodebug.soar.management.mods.impl;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -23,7 +24,7 @@ public class ToggleSprintMod extends SimpleHUDMod {
 	private State state;
 	
 	public ToggleSprintMod() {
-		super(TranslateText.TOGGLE_SPRINT, TranslateText.TOGGLE_SPRINT_DESCRIPTION);
+		super(Icons.PERSON_ARROW_RIGHT_24, TranslateText.TOGGLE_SPRINT, TranslateText.TOGGLE_SPRINT_DESCRIPTION, "", false);
 	}
 	
 	@Override

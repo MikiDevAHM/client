@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class TimeChangerMod extends Mod {
 
@@ -12,7 +13,7 @@ public class TimeChangerMod extends Mod {
 	private NumberSetting timeSetting = new NumberSetting(TranslateText.TIME, this, 12, 0, 24, false);
 	
 	public TimeChangerMod() {
-		super(TranslateText.TIME_CHANGER, TranslateText.TIME_CHANGER_DESCRIPTION, ModCategory.WORLD);
+		super(Icons.GLOBE_CLOCK_24, TranslateText.TIME_CHANGER, TranslateText.TIME_CHANGER_DESCRIPTION, ModCategory.WORLD, "weather", false);
 		
 		instance = this;
 	}

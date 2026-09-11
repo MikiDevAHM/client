@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -25,7 +26,7 @@ public class TaplookMod extends Mod {
 	private KeybindSetting keybindSetting = new KeybindSetting(TranslateText.KEYBIND, this, Keyboard.KEY_P);
 	
 	public TaplookMod() {
-		super(TranslateText.TAPLOOK, TranslateText.TAPLOOK_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.TAP_SINGLE_24, TranslateText.TAPLOOK, TranslateText.TAPLOOK_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 	
 	@EventTarget

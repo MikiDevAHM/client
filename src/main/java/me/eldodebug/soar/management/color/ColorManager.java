@@ -54,6 +54,7 @@ public class ColorManager {
 		add("Greys", new Color(140, 140, 140), new Color(189, 189, 189));
 		add("Pandas", new Color(182, 182, 182), new Color(54, 54, 54));
 		add("Flame", new Color(224, 7, 7), new Color(224, 175, 15));
+		add("Aiko", new Color(160, 32, 240), new Color(160, 32, 240));
 		
 		currentColor = getColorByName("Default");
 	}

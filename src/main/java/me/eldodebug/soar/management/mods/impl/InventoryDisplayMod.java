@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.render.RenderUtils;
 import net.minecraft.item.ItemStack;
@@ -15,7 +16,7 @@ import net.minecraft.item.ItemStack;
 public class InventoryDisplayMod extends HUDMod {
 
 	public InventoryDisplayMod() {
-		super(TranslateText.INVENTORY_DISPLAY, TranslateText.INVENTORY_DISPLAY_DESCRIPTION);
+		super(Icons.SLIDE_GRID_24, TranslateText.INVENTORY_DISPLAY, TranslateText.INVENTORY_DISPLAY_DESCRIPTION, "", false);
 	}
 	
 	@EventTarget

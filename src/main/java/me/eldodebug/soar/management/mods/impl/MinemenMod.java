@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.network.play.server.S02PacketChat;
 
 public class MinemenMod extends Mod {
@@ -13,7 +14,7 @@ public class MinemenMod extends Mod {
 	private BooleanSetting autoPlaySetting = new BooleanSetting(TranslateText.AUTO_PLAY, this, false);
 	
 	public MinemenMod() {
-		super(TranslateText.MINEMEN, TranslateText.MINEMEN_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.QUESTION_CIRCLE_24, TranslateText.MINEMEN, TranslateText.MINEMEN_DESCRIPTION, ModCategory.OTHER, "", false);
 	}
 
 	@EventTarget

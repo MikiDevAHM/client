@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.PlayerUtils;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -16,7 +17,7 @@ public class BowZoomMod extends Mod {
 	private NumberSetting factorSetting = new NumberSetting(TranslateText.FACTOR, this, 5, 1, 15, true);
 	
 	public BowZoomMod() {
-		super(TranslateText.BOW_ZOOM, TranslateText.BOW_ZOOM_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.ARROW_UP_RIGHT_24, TranslateText.BOW_ZOOM, TranslateText.BOW_ZOOM_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 
 	@EventTarget

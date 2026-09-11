@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.text.DecimalFormat;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -28,13 +29,8 @@ public class StopwatchMod extends SimpleHUDMod {
 	private DecimalFormat timeFormat = new DecimalFormat("0.00");
 	
 	public StopwatchMod() {
-		super(TranslateText.STOPWATCH, TranslateText.STOPWATCH_DESCRIPTION);
+		super(Icons.TIMER_10_24, TranslateText.STOPWATCH, TranslateText.STOPWATCH_DESCRIPTION, "", false);
 	}
-	
-//	@EventTarget
-//	public void onRender2D(EventRender2D event) {
-//		this.draw();
-//	}
 
     @EventTarget
     public void onRenderNVG(EventNVG event) {

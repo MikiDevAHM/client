@@ -14,6 +14,7 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.TextureUtil;
@@ -31,7 +32,7 @@ public class PackDisplayMod extends HUDMod {
 	private BooleanSetting compactSetting = new BooleanSetting(TranslateText.COMPACT, this, false);
 	
 	public PackDisplayMod() {
-		super(TranslateText.PACK_DISPLAY, TranslateText.PACK_DISPLAY_DESCRIPTION);
+		super(Icons.TEXT_BULLET_LIST_SQUARE_24, TranslateText.PACK_DISPLAY, TranslateText.PACK_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@Override

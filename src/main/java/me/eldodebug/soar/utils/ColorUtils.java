@@ -117,4 +117,9 @@ public class ColorUtils {
         
         return a;
 	}
+
+	public static Color applyAlpha(Color color, float alphaFactor) {
+		int alpha = Math.max(0, Math.min(255, Math.round(color.getAlpha() * alphaFactor)));
+		return new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
+	}
 }

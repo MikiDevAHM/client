@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class WeatherChangerMod extends Mod {
 
@@ -21,7 +22,7 @@ public class WeatherChangerMod extends Mod {
 	private NumberSetting thunderStrength = new NumberSetting(TranslateText.THUNDER_STRENGTH, this, 1, 0, 1, false);
 	
 	public WeatherChangerMod() {
-		super(TranslateText.WEATHER_CHANGER, TranslateText.WEATHER_CHANGER_DESCRIPTION, ModCategory.WORLD);
+		super(Icons.WEATHER_MOON_OFF_24, TranslateText.WEATHER_CHANGER, TranslateText.WEATHER_CHANGER_DESCRIPTION, ModCategory.WORLD, "",false);
 		
 		instance = this;
 	}

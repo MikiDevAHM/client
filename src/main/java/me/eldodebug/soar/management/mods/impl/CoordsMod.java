@@ -14,6 +14,7 @@ import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.chunk.Chunk;
@@ -25,7 +26,7 @@ public class CoordsMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public CoordsMod() {
-		super(TranslateText.COORDS, TranslateText.COORDS_DEDSCRIPTION, "coordinates");
+		super(Icons.POINT_SCAN_24, TranslateText.COORDS, TranslateText.COORDS_DEDSCRIPTION, "coordinates", false);
 	}
 
 	@EventTarget

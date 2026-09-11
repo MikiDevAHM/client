@@ -13,6 +13,7 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.render.RenderUtils;
 import net.minecraft.client.renderer.GlStateManager;
@@ -30,7 +31,7 @@ public class PotionStatusMod extends HUDMod {
 	private Collection<PotionEffect> potions;
 	
 	public PotionStatusMod() {
-		super(TranslateText.POTION_STATUS, TranslateText.POTION_STATUS_DESCRIPTION);
+		super(Icons.BEAKER_24, TranslateText.POTION_STATUS, TranslateText.POTION_STATUS_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

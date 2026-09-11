@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.awt.Color;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -34,7 +35,7 @@ public class MinimapMod extends HUDMod {
 	private ChunkAtlas chunkAtlas;
 	
 	public MinimapMod() {
-		super(TranslateText.MINIMAP, TranslateText.MINIMAP_DESCRIPTION);
+		super(Icons.MAP_24, TranslateText.MINIMAP, TranslateText.MINIMAP_DESCRIPTION, "", false);
 	}
 
 	@Override

@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 
 public class DayCounterMod extends SimpleHUDMod {
@@ -13,7 +14,7 @@ public class DayCounterMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public DayCounterMod() {
-		super(TranslateText.DAY_COUNTER, TranslateText.DAY_COUNTER_DESCRIPTION);
+		super(Icons.TIME_AND_WEATHER_24, TranslateText.DAY_COUNTER, TranslateText.DAY_COUNTER_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

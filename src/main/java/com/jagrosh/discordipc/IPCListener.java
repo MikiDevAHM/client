@@ -1,9 +1,9 @@
-package me.eldodebug.soar.discord.ipc;
+package com.jagrosh.discordipc;
 
 import com.google.gson.JsonObject;
 
-import me.eldodebug.soar.discord.ipc.entities.Packet;
-import me.eldodebug.soar.discord.ipc.entities.User;
+import com.jagrosh.discordipc.entities.Packet;
+import com.jagrosh.discordipc.entities.User;
 
 public interface IPCListener {
 	

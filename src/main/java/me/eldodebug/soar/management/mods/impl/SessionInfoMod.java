@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.utils.ServerUtils;
 import net.minecraft.network.play.server.S02PacketChat;
@@ -25,7 +26,7 @@ public class SessionInfoMod extends HUDMod {
 	private long startTime;
 	
 	public SessionInfoMod() {
-		super(TranslateText.SESSION_INFO, TranslateText.SESSION_INFO_DESCRIPTION, "stats");
+		super(Icons.BOOK_INFORMATION_24, TranslateText.SESSION_INFO, TranslateText.SESSION_INFO_DESCRIPTION, "stats", false);
 	}
 
 	@EventTarget

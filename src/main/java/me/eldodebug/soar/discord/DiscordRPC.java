@@ -2,12 +2,11 @@ package me.eldodebug.soar.discord;
 
 import java.time.OffsetDateTime;
 
-import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.GlideMeta;
-import me.eldodebug.soar.discord.ipc.IPCClient;
-import me.eldodebug.soar.discord.ipc.IPCListener;
-import me.eldodebug.soar.discord.ipc.entities.RichPresence;
-import me.eldodebug.soar.discord.ipc.exceptions.NoDiscordClientException;
+import com.jagrosh.discordipc.IPCClient;
+import com.jagrosh.discordipc.IPCListener;
+import com.jagrosh.discordipc.entities.RichPresence;
+import com.jagrosh.discordipc.exceptions.NoDiscordClientException;
 
 public class DiscordRPC {
 

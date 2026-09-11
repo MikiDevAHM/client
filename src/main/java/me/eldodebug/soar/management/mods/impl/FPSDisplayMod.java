@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import net.minecraft.client.Minecraft;
 
@@ -14,7 +15,7 @@ public class FPSDisplayMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public FPSDisplayMod() {
-		super(TranslateText.FPS_DISPLAY, TranslateText.FPS_DISPLAY_DESCRIPTION);
+		super(Icons.FPS_30_24, TranslateText.FPS_DISPLAY, TranslateText.FPS_DISPLAY_DESCRIPTION, "", false);
 	}
 	
 	@EventTarget

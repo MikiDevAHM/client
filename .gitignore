@@ -38,3 +38,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+src/main/java/me/eldodebug/soar/injection/mixin/GlideFMLTweaker.java
+src/main/java/me/eldodebug/soar/injection/mixin/GlideFMLTweaker.java

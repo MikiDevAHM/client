@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -34,7 +35,7 @@ public class ZoomMod extends Mod {
 	private KeybindSetting keybindSetting = new KeybindSetting(TranslateText.KEYBIND, this, Keyboard.KEY_C);
 	
 	public ZoomMod() {
-		super(TranslateText.ZOOM, TranslateText.ZOOM_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.ZOOM_IN_24, TranslateText.ZOOM, TranslateText.ZOOM_DESCRIPTION, ModCategory.PLAYER, "optifine", false);
 	}
 
 	@EventTarget

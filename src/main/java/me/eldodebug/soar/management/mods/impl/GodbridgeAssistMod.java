@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.event.impl.EventTick;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.item.ItemBlock;
 
@@ -16,7 +17,7 @@ public class GodbridgeAssistMod extends HUDMod {
 	private int shiftedTicks = 0;
 	
 	public GodbridgeAssistMod() {
-		super(TranslateText.GODBRIDGE_ASSIST, TranslateText.GODBRIDGE_ASSIST_DESCRIPTION);
+		super(Icons.ARROW_CLOCKWISE_24, TranslateText.GODBRIDGE_ASSIST, TranslateText.GODBRIDGE_ASSIST_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

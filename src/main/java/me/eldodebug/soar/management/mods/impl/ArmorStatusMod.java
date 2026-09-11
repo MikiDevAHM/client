@@ -10,6 +10,7 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -24,7 +25,7 @@ public class ArmorStatusMod extends HUDMod {
 	private BooleanSetting valueSetting = new BooleanSetting(TranslateText.VALUE, this, false);
 	
 	public ArmorStatusMod() {
-		super(TranslateText.ARMOR_STATUS, TranslateText.ARMOR_STATUS_DESCRIPTION);
+		super(Icons.SHIELD_24, TranslateText.ARMOR_STATUS, TranslateText.ARMOR_STATUS_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

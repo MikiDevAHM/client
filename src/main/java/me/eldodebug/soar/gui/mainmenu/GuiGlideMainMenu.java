@@ -76,7 +76,6 @@ public class GuiGlideMainMenu extends GuiScreen {
         scenes.add(new UpdateScene(this));
 
         if (instance.isFirstLogin()) {
-            mc.gameSettings.useVbo = true;
             currentScene = getSceneByClass(WelcomeMessageScene.class);
         } else {
             if (instance.getUpdateNeeded()) {

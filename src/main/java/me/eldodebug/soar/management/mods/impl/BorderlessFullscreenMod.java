@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -20,7 +21,7 @@ public class BorderlessFullscreenMod extends Mod {
 	private long fullscreenTime = -1;
 	
 	public BorderlessFullscreenMod() {
-		super(TranslateText.BORDERLESS_FULSCREEN, TranslateText.BORDERLESS_FULLSCREEN_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.WINDOW_24, TranslateText.BORDERLESS_FULSCREEN, TranslateText.BORDERLESS_FULLSCREEN_DESCRIPTION, ModCategory.OTHER, "decorate", false);
 	}
 
 	@EventTarget

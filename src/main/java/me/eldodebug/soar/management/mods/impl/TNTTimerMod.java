@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -36,7 +37,7 @@ public class TNTTimerMod extends SimpleHUDMod {
 			new Option(TranslateText.TAG), new Option(TranslateText.HUD))));
 	
 	public TNTTimerMod() {
-		super(TranslateText.TNT_TIMER, TranslateText.TNT_TIMER_DESCRIPTION);
+		super(Icons.SHIFTS_ACTIVITY_24, TranslateText.TNT_TIMER, TranslateText.TNT_TIMER_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

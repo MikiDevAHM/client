@@ -51,9 +51,6 @@ public class NanoVGManager {
     private final FloatBuffer f4Buff = MemoryUtil.memAllocFloat(4);
     private final IntBuffer i1buff1 = MemoryUtil.memAllocInt(1);
     private final IntBuffer i1buff2 = MemoryUtil.memAllocInt(1);
-    private final FloatBuffer f1Buff1 = MemoryUtil.memAllocFloat(1);
-    private final FloatBuffer f1Buff2 = MemoryUtil.memAllocFloat(1);
-
     private final CircQueue<NVGColor> colorQueue = new CircQueue<>(NVGColor.calloc(), NVGColor.calloc(), NVGColor.calloc(), NVGColor.calloc());
     private final CircQueue<NVGPaint> paintQueue = new CircQueue<>(NVGPaint.calloc(), NVGPaint.calloc(), NVGPaint.calloc(), NVGPaint.calloc());
 
@@ -88,8 +85,6 @@ public class NanoVGManager {
         MemoryUtil.memFree(f4Buff);
         MemoryUtil.memFree(i1buff1);
         MemoryUtil.memFree(i1buff2);
-        MemoryUtil.memFree(f1Buff1);
-        MemoryUtil.memFree(f1Buff2);
     }
 
     public NVGColor getColor(Color color) {

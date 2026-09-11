@@ -36,7 +36,6 @@ public class ModManager {
 		mods.add(new ChunkBordersMod());
 		mods.add(new ClearGlassMod());
 		mods.add(new ClearWaterMod());
-		mods.add(new ClientSpooferMod());
 		mods.add(new ClockMod());
 		mods.add(new ColorSaturationMod());
 		mods.add(new ComboCounterMod());

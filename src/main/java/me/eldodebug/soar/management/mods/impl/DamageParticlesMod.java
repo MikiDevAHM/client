@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.injection.interfaces.IMixinRenderManager;
@@ -29,7 +30,7 @@ public class DamageParticlesMod extends Mod {
 	private Particle removeParticle;
 	
 	public DamageParticlesMod() {
-		super(TranslateText.DAMAGE_PARTICLES, TranslateText.DAMAGE_PARTICLES_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.SPARKLE_24, TranslateText.DAMAGE_PARTICLES, TranslateText.DAMAGE_PARTICLES_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

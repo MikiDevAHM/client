@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import net.minecraft.util.MovingObjectPosition;
 
@@ -22,7 +23,7 @@ public class ReachDisplayMod extends SimpleHUDMod {
 	private long hitTime =  -1;
 	
 	public ReachDisplayMod() {
-		super(TranslateText.REACH_DISPLAY, TranslateText.REACH_DISPLAY_DESCRIPTION);
+		super(Icons.ARROW_AUTOFIT_WIDTH_24, TranslateText.REACH_DISPLAY, TranslateText.REACH_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

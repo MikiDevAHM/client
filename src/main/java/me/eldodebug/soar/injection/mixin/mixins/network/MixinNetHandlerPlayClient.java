@@ -1,5 +1,6 @@
 package me.eldodebug.soar.injection.mixin.mixins.network;
 
+import net.minecraft.network.Packet;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,7 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import io.netty.buffer.Unpooled;
 import me.eldodebug.soar.management.event.impl.EventDamageEntity;
 import me.eldodebug.soar.management.language.TranslateText;
-import me.eldodebug.soar.management.mods.impl.ClientSpooferMod;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import net.minecraft.client.ClientBrandRetriever;
@@ -35,21 +35,21 @@ public class MixinNetHandlerPlayClient {
     private NetworkManager netManager;
 	
 	@Redirect(method = "handleJoinGame", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/NetworkManager;sendPacket(Lnet/minecraft/network/Packet;)V"))
-	public void sendBrand() {
+	public void sendBrand(NetworkManager instance, Packet packetIn) {
 		
 		PacketBuffer data = new PacketBuffer(Unpooled.buffer()).writeString("GlideClient");
 		
-		if(ClientSpooferMod.getInstance().isToggled()) {
-			
-			ComboSetting setting = ClientSpooferMod.getInstance().getTypeSetting();
-        	Option type = setting.getOption();
-        	
-        	if(type.getTranslate().equals(TranslateText.VANILLA)) {
-        		data = new PacketBuffer(Unpooled.buffer()).writeString(ClientBrandRetriever.getClientModName());
-        	} else if(type.getTranslate().equals(TranslateText.FORGE)) {
-        		data = new PacketBuffer(Unpooled.buffer()).writeString("FML");
-        	}
-		}
+//		if(ClientSpooferMod.getInstance().isToggled()) {
+//
+//			ComboSetting setting = ClientSpooferMod.getInstance().getTypeSetting();
+//        	Option type = setting.getOption();
+//
+//        	if(type.getTranslate().equals(TranslateText.VANILLA)) {
+//        		data = new PacketBuffer(Unpooled.buffer()).writeString(ClientBrandRetriever.getClientModName());
+//        	} else if(type.getTranslate().equals(TranslateText.FORGE)) {
+//        		data = new PacketBuffer(Unpooled.buffer()).writeString("FML");
+//        	}
+//		}
 		
 		netManager.sendPacket(new C17PacketCustomPayload("MC|Brand", data));
 	}

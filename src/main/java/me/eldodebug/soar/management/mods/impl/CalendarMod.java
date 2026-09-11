@@ -11,15 +11,17 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class CalendarMod extends HUDMod {
 
 	private int height;
 	
 	public CalendarMod() {
-		super(TranslateText.CALENDAR, TranslateText.CALENDAR_DESCRIPTION);
+		super(Icons.CALENDAR_LTR_24, TranslateText.CALENDAR, TranslateText.CALENDAR_DESCRIPTION, "", false);
 	}
 
+	//TODO: fix the weird offset
 	@EventTarget
 	public void onRender2D(EventNVG event) {
 		Calendar calendar = Calendar.getInstance();

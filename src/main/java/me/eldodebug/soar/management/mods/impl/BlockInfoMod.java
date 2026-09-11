@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.animation.normal.Animation;
 import me.eldodebug.soar.utils.animation.normal.Direction;
@@ -32,7 +33,7 @@ public class BlockInfoMod extends HUDMod {
     private Block block;
     
 	public BlockInfoMod() {
-		super(TranslateText.BLOCK_INFO, TranslateText.BLOCK_INFO_DESCRIPTION, "waila");
+		super(Icons.RECEIPT_CUBE_24, TranslateText.BLOCK_INFO, TranslateText.BLOCK_INFO_DESCRIPTION, "waila", false);
 	}
 
 	@Override
@@ -87,7 +88,7 @@ public class BlockInfoMod extends HUDMod {
 			
 			this.drawBackground(80, 80);
 			
-			this.drawCenteredText(block.getLocalizedName(), 40, 6, 9, getHudFont(1));
+			this.drawCenteredText(block.getLocalizedName(), 40, 10, 9, getHudFont(1));
 		}
 	}
 }

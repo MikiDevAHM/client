@@ -10,6 +10,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.proj.Projection;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
@@ -27,7 +28,7 @@ public class SuperHeroFxMod extends Mod {
     private final List<HeroTextParticle> particles = new ArrayList<>();
 
     public SuperHeroFxMod() {
-        super(TranslateText.SUPERHEROFX_NAME, TranslateText.SUPERHEROFX_DESCRIPTION, ModCategory.RENDER);
+        super(Icons.FLASH_24, TranslateText.SUPERHEROFX_NAME, TranslateText.SUPERHEROFX_DESCRIPTION, ModCategory.RENDER, "",false);
     }
 
     private static final String[] WORDS = {

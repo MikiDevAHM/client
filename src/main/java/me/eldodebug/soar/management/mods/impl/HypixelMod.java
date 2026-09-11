@@ -15,6 +15,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.impl.hypixel.HypixelGameMode;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 import me.eldodebug.soar.utils.Multithreading;
 import me.eldodebug.soar.utils.ServerUtils;
@@ -50,7 +51,7 @@ public class HypixelMod extends Mod {
 	private HypixelGameMode currentMode;
 
 	public HypixelMod() {
-		super(TranslateText.HYPIXEL, TranslateText.HYPIXEL_DESCRIPTION, ModCategory.OTHER, "hytill");
+		super(Icons.QUESTION_CIRCLE_24, TranslateText.HYPIXEL, TranslateText.HYPIXEL_DESCRIPTION, ModCategory.OTHER, "hytill", false);
 
 		instance = this;
 	}

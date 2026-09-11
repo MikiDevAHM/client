@@ -10,6 +10,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.event.ClickEvent;
 import net.minecraft.event.HoverEvent;
 import net.minecraft.network.play.server.S02PacketChat;
@@ -26,8 +27,7 @@ public class ChatTranslateMod extends Mod {
 			new Option(TranslateText.JAPANESE), new Option(TranslateText.ENGLISH), new Option(TranslateText.CHINESE), new Option(TranslateText.POLISH))));
 	
 	public ChatTranslateMod() {
-		super(TranslateText.CHAT_TRANSLATE, TranslateText.CHAT_TRANSLATE_DESCRIPTION, ModCategory.OTHER);
-		
+		super(Icons.TRANSLATE_24, TranslateText.CHAT_TRANSLATE, TranslateText.CHAT_TRANSLATE_DESCRIPTION, ModCategory.OTHER, "", false);
 		instance = this;
 	}
 

@@ -17,6 +17,7 @@ import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 import net.minecraft.client.gui.ScaledResolution;
@@ -40,7 +41,7 @@ public class ModernHotbarMod extends HUDMod {
 			new Option(TranslateText.PICKUP_POP), new Option(TranslateText.PICKUP_BREAD), new Option(TranslateText.PICKUP_VANILLA))));
 
 	public ModernHotbarMod() {
-		super(TranslateText.MODERN_HOTBAR, TranslateText.MODERN_HOTBAR_DESCRIPTION);
+		super(Icons.EXTENDED_DOCK_24, TranslateText.MODERN_HOTBAR, TranslateText.MODERN_HOTBAR_DESCRIPTION, "", false);
 		
 		this.setDraggable(false);
 	}

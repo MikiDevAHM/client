@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.gui.GuiQuickPlay;
@@ -15,7 +16,7 @@ public class HypixelQuickPlayMod extends Mod {
 	private KeybindSetting keybindSetting = new KeybindSetting(TranslateText.KEYBIND, this, Keyboard.KEY_N);
 	
 	public HypixelQuickPlayMod() {
-		super(TranslateText.HYPIXEL_QUICK_PLAY, TranslateText.HYPIXEL_QUICK_PLAY_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.FAST_FORWARD_24, TranslateText.HYPIXEL_QUICK_PLAY, TranslateText.HYPIXEL_QUICK_PLAY_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 
 	@EventTarget

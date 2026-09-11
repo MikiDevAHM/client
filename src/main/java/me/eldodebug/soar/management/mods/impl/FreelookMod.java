@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -35,9 +36,9 @@ public class FreelookMod extends Mod {
 	private KeybindSetting keybindSetting = new KeybindSetting(TranslateText.KEYBIND, this, Keyboard.KEY_V);
 	
 	public FreelookMod() {
-		super(TranslateText.FREELOOK, TranslateText.FREELOOK_DESCRIPTION, ModCategory.PLAYER,"perspectivemod", true);
+		super(Icons.CAMERA_SWITCH_24, TranslateText.FREELOOK, TranslateText.FREELOOK_DESCRIPTION, ModCategory.PLAYER,"perspectivemod", true);
 	}
-	
+
 	@EventTarget
 	public void onTick(EventTick event) {
 		

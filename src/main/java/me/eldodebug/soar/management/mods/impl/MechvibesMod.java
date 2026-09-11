@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
@@ -49,7 +50,7 @@ public class MechvibesMod extends Mod {
 	private NumberSetting mouseVolumeSetting = new NumberSetting(TranslateText.MOUSE_VOLUME, this, 0.5, 0.0, 1.0, false);
 	
 	public MechvibesMod() {
-		super(TranslateText.MECHVIBES, TranslateText.MECHVIBES_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.DESKTOP_KEYBOARD_24, TranslateText.MECHVIBES, TranslateText.MECHVIBES_DESCRIPTION, ModCategory.OTHER, "", false);
 	}
 	
 	@Override

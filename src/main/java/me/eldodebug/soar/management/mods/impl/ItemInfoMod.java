@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.PlayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
@@ -28,7 +29,7 @@ public class ItemInfoMod extends Mod {
 	private BooleanSetting potionColorSetting = new BooleanSetting(TranslateText.POTION_COLOR, this, false);
 	
 	public ItemInfoMod() {
-		super(TranslateText.ITEM_INFO, TranslateText.ITEM_INFO_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.TAG_QUESTION_MARK_24, TranslateText.ITEM_INFO, TranslateText.ITEM_INFO_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@EventTarget

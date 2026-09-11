@@ -1,4 +1,4 @@
-package me.eldodebug.soar.discord.ipc.entities;
+package com.jagrosh.discordipc.entities;
 
 public class User {
 	

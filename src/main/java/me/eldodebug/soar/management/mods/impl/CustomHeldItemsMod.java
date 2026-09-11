@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.renderer.GlStateManager;
 
 public class CustomHeldItemsMod extends Mod {
@@ -19,7 +20,7 @@ public class CustomHeldItemsMod extends Mod {
 	private NumberSetting zScaleSetting = new NumberSetting(TranslateText.Z_SCALE, this, 1, 0, 1, false);
 	
 	public CustomHeldItemsMod() {
-		super(TranslateText.CUSTOM_HELD_ITEMS, TranslateText.CUSTOM_HELD_ITEMS_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.DESIGN_IDEAS_24, TranslateText.CUSTOM_HELD_ITEMS, TranslateText.CUSTOM_HELD_ITEMS_DESCRIPTION, ModCategory.RENDER, "holdsword", false);
 	}
 
 	@EventTarget

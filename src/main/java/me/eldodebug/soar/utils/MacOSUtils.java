@@ -8,6 +8,7 @@ import java.io.InputStream;
 public class MacOSUtils {
 
     public static void setDockIcon(String path){
+
         if(Util.getOSType() != Util.EnumOS.OSX) return;  // Redundant check
         InputStream icon = MacOSUtils.class.getResourceAsStream(path); // you could probably use resource location but users can then change it with a TexturePack
         if (icon != null) {

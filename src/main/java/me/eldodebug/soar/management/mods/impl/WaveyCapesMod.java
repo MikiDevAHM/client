@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class WaveyCapesMod extends Mod {
 
@@ -27,7 +28,7 @@ public class WaveyCapesMod extends Mod {
 	private NumberSetting heightMultiplierSetting = new NumberSetting(TranslateText.HEIGHT_MULTIPLIER, this, 6, 2, 10, true);
 	
 	public WaveyCapesMod() {
-		super(TranslateText.WAVEY_CAPES, TranslateText.WAVEY_CAPES_DESCRIPTION, ModCategory.RENDER, "clothcapesoftfabriccloak");
+		super(Icons.STREAM_24, TranslateText.WAVEY_CAPES, TranslateText.WAVEY_CAPES_DESCRIPTION, ModCategory.RENDER, "clothcapesoftfabriccloak", false);
 		
 		instance = this;
 	}

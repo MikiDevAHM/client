@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class InventoryMod extends Mod {
 
@@ -22,7 +23,7 @@ public class InventoryMod extends Mod {
 	private BooleanSetting particleSetting = new BooleanSetting(TranslateText.PARTICLE, this, false);
 	
 	public InventoryMod() {
-		super(TranslateText.INVENTORY, TranslateText.INVENTORY_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.GRID_24, TranslateText.INVENTORY, TranslateText.INVENTORY_DESCRIPTION, ModCategory.OTHER, "", false);
 		
 		instance = this;
 	}

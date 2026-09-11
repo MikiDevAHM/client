@@ -8,6 +8,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.block.Block;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.entity.EntityLivingBase;
@@ -23,7 +24,7 @@ public class BloodParticlesMod extends Mod {
 	private BooleanSetting soundSetting = new BooleanSetting(TranslateText.SOUND, this, true);
 	
 	public BloodParticlesMod() {
-		super(TranslateText.BLOOD_PARTICLES, TranslateText.BLOOD_PARTICLES_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.BRIEFCASE_MEDICAL_24, TranslateText.BLOOD_PARTICLES, TranslateText.BLOOD_PARTICLES_DESCRIPTION, ModCategory.RENDER, "redstonehypixel", false);
 	}
 
 	@EventTarget

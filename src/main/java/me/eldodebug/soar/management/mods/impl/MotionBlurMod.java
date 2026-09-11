@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.Sound;
 import org.lwjgl.opengl.GL11;
 
@@ -37,7 +38,7 @@ public class MotionBlurMod extends Mod {
 	private NumberSetting amountSetting = new NumberSetting(TranslateText.AMOUNT, this, 0.5, 0.1, 0.9, false);
 	
 	public MotionBlurMod() {
-		super(TranslateText.MOTION_BLUR, TranslateText.MOTION_BLUR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.IMAGE_MULTIPLE_24, TranslateText.MOTION_BLUR, TranslateText.MOTION_BLUR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@Override

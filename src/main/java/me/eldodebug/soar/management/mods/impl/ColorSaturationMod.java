@@ -11,6 +11,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.shader.ShaderGroup;
 import net.minecraft.client.shader.ShaderUniform;
@@ -32,7 +33,7 @@ public class ColorSaturationMod extends Mod {
 	private NumberSetting saturationSetting = new NumberSetting(TranslateText.SATURATION, this, 0.5, 0, 1.0, false);
 	
 	public ColorSaturationMod() {
-		super(TranslateText.COLOR_SATURATION, TranslateText.COLOR_SATURATION_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.COLOR_BACKGROUND_24, TranslateText.COLOR_SATURATION, TranslateText.COLOR_SATURATION_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@EventTarget

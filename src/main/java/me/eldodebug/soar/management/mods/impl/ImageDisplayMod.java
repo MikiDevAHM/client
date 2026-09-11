@@ -16,6 +16,7 @@ import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ImageSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class ImageDisplayMod extends HUDMod {
 
@@ -28,7 +29,7 @@ public class ImageDisplayMod extends HUDMod {
 	private File prevImage;
 	
 	public ImageDisplayMod() {
-		super(TranslateText.IMAGE_DISPLAY, TranslateText.IMAGE_DISPLAY_DESCRIPTION);
+		super(Icons.IMAGE_24, TranslateText.IMAGE_DISPLAY, TranslateText.IMAGE_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

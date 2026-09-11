@@ -5,6 +5,7 @@ import me.eldodebug.soar.management.event.impl.*;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 
 public class ComboCounterMod extends SimpleHUDMod {
@@ -15,7 +16,7 @@ public class ComboCounterMod extends SimpleHUDMod {
 	private int combo, possibleTarget;
 	
 	public ComboCounterMod() {
-		super(TranslateText.COMBO_COUNTER, TranslateText.COMBO_COUNTER_DESCRIPTION);
+		super(Icons.SHIFTS_30_MINUTES_24, TranslateText.COMBO_COUNTER, TranslateText.COMBO_COUNTER_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

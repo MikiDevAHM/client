@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class TabEditorMod extends Mod {
 
@@ -13,7 +14,7 @@ public class TabEditorMod extends Mod {
     private BooleanSetting headSetting = new BooleanSetting(TranslateText.HEAD, this, true);
     
 	public TabEditorMod() {
-		super(TranslateText.TAB_EDITOR, TranslateText.TAB_EDITOR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.TEXT_BULLET_LIST_SQUARE_EDIT_24, TranslateText.TAB_EDITOR, TranslateText.TAB_EDITOR_DESCRIPTION, ModCategory.RENDER, "", false);
 		
 		instance = this;
 	}

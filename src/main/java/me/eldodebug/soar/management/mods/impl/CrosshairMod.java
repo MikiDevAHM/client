@@ -7,6 +7,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.render.RenderUtils;
 import net.minecraft.client.Minecraft;
@@ -22,7 +23,7 @@ public class CrosshairMod extends Mod {
 	private NumberSetting scaleSetting = new NumberSetting(TranslateText.SCALE, this, 1, 0.3, 2, false);
 	
 	public CrosshairMod() {
-		super(TranslateText.CROSSHAIR, TranslateText.CROSSHAIR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.ADD_SQUARE_24, TranslateText.CROSSHAIR, TranslateText.CROSSHAIR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

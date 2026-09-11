@@ -1,13 +1,13 @@
-package me.eldodebug.soar.discord.ipc.entities.pipe;
+package com.jagrosh.discordipc.entities.pipe;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
-import me.eldodebug.soar.discord.ipc.IPCClient;
-import me.eldodebug.soar.discord.ipc.entities.Callback;
-import me.eldodebug.soar.discord.ipc.entities.Packet;
-import me.eldodebug.soar.discord.ipc.entities.serialize.PacketDeserializer;
+import com.jagrosh.discordipc.IPCClient;
+import com.jagrosh.discordipc.entities.Callback;
+import com.jagrosh.discordipc.entities.Packet;
+import com.jagrosh.discordipc.entities.serialize.PacketDeserializer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

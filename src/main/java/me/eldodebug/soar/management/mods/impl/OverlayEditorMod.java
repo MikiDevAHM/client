@@ -7,6 +7,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class OverlayEditorMod extends Mod {
 
@@ -14,7 +15,7 @@ public class OverlayEditorMod extends Mod {
 	private BooleanSetting hideFireSetting = new BooleanSetting(TranslateText.HIDE_FIRE, this, false);
 	
 	public OverlayEditorMod() {
-		super(TranslateText.OVERLAY_EDITOR, TranslateText.OVERLAY_EDITOR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.PROHIBITED_MULTIPLE_24, TranslateText.OVERLAY_EDITOR, TranslateText.OVERLAY_EDITOR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@EventTarget

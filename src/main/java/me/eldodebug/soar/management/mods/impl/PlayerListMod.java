@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.client.network.NetworkPlayerInfo;
 
 public class PlayerListMod extends HUDMod {
@@ -19,7 +20,7 @@ public class PlayerListMod extends HUDMod {
 	private float maxName;
 	
 	public PlayerListMod() {
-		super(TranslateText.PLAYER_LIST, TranslateText.PLAYER_LIST_DESCRIPTION);
+		super(Icons.APPS_LIST_24, TranslateText.PLAYER_LIST, TranslateText.PLAYER_LIST_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ColorSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class HitColorMod extends Mod {
 
@@ -20,7 +21,7 @@ public class HitColorMod extends Mod {
     private NumberSetting alphaSetting = new NumberSetting(TranslateText.ALPHA, this, 0.45, 0, 1.0, false);
     
 	public HitColorMod() {
-		super(TranslateText.HIT_COLOR, TranslateText.HIT_COLOR_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.TAP_DOUBLE_24, TranslateText.HIT_COLOR, TranslateText.HIT_COLOR_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 
 	@EventTarget

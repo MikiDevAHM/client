@@ -4,6 +4,7 @@ import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.ServerUtils;
 import me.eldodebug.soar.utils.render.RenderUtils;
@@ -14,7 +15,7 @@ import net.minecraft.entity.boss.BossStatus;
 public class BossHealthMod extends HUDMod {
 
 	public BossHealthMod() {
-		super(TranslateText.BOSS_HEALTH, TranslateText.BOSS_HEALTH_DESCRIPTION);
+        super(Icons.TEXT_UNDERLINE_24, TranslateText.BOSS_HEALTH, TranslateText.BOSS_HEALTH_DESCRIPTION, "vanilahud", false);
 	}
 
 	@EventTarget

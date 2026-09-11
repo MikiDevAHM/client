@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 import net.java.games.input.Mouse;
@@ -21,7 +22,7 @@ public class RawInputMod extends Mod {
 	private volatile boolean running;
 	
 	public RawInputMod() {
-		super(TranslateText.RAW_INPUT, TranslateText.RAW_INPUT_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.CONTROL_BUTTON_24, TranslateText.RAW_INPUT, TranslateText.RAW_INPUT_DESCRIPTION, ModCategory.OTHER, "", false);
 		
 		instance = this;
 	}

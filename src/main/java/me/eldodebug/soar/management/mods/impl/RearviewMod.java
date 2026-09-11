@@ -9,6 +9,7 @@ import me.eldodebug.soar.management.mods.impl.rearview.RearviewCamera;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.TimerUtils;
 
 public class RearviewMod extends HUDMod {
@@ -24,7 +25,7 @@ public class RearviewMod extends HUDMod {
 	private NumberSetting alphaSetting = new NumberSetting(TranslateText.ALPHA, this, 1.0F, 0.0F, 1.0F, false);
 	
 	public RearviewMod() {
-		super(TranslateText.REARVIEW, TranslateText.REARVIEW_DESCRIPTION, "", true);
+		super(Icons.EYE_TRACKING_24, TranslateText.REARVIEW, TranslateText.REARVIEW_DESCRIPTION, "", true);
 	}
 
 	@EventTarget

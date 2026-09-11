@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class Skin3DMod extends Mod {
 
@@ -15,7 +16,7 @@ public class Skin3DMod extends Mod {
 	private int renderDistanceLOD = 14;
 	
 	public Skin3DMod() {
-		super(TranslateText.SKIN_3D, TranslateText.SKIN_3D_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.STACK_24, TranslateText.SKIN_3D, TranslateText.SKIN_3D_DESCRIPTION, ModCategory.RENDER, "", false);
 		
 		instance = this;
 	}

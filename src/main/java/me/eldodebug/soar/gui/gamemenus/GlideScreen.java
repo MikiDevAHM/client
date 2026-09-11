@@ -4,17 +4,17 @@ import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 import net.minecraft.client.Minecraft;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 
-public class GlideScreen {
+public abstract class GlideScreen {
 
     public Minecraft mc = Minecraft.getMinecraft();
-    private MenuManager menuManager;
-    private SimpleAnimation animation = new SimpleAnimation();
-    private String menuName = "";
-
-    private final ArrayList<ViewMenuButton> viewMenuButtons = new ArrayList<>();
+    private final MenuManager menuManager;
+    private final SimpleAnimation animation = new SimpleAnimation();
+    private final String menuName;
+    private final List<ViewMenuButton> viewMenuButtons = new ArrayList<>();
 
     public GlideScreen(MenuManager manager, String menuName) {
         this.menuManager = manager;
@@ -25,11 +25,11 @@ public class GlideScreen {
         this.viewMenuButtons.add(action);
     }
 
-    protected void resetMenuAction() {
+    protected void clearMenuActions() {
         this.viewMenuButtons.clear();
     }
 
-    public ArrayList<ViewMenuButton> getMenuActions() {
+    public List<ViewMenuButton> getMenuActions() {
         return viewMenuButtons;
     }
 
@@ -71,11 +71,11 @@ public class GlideScreen {
         return menuManager.getViewByClass(clazz);
     }
 
-    public String getMenuName(){
+    public String getMenuName() {
         return this.menuName;
     }
 
-    public void setMenu(Glide instance){
+    public void setMenu(Glide instance) {
         menuManager.setView(instance);
     }
 }

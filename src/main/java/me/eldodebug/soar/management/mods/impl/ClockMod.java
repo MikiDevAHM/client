@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.nanovg.NVGColor;
 import org.lwjgl.nanovg.NanoVG;
 
@@ -33,7 +34,7 @@ public class ClockMod extends SimpleHUDMod {
 	private DateFormat df = new SimpleDateFormat("HH:mm a", Locale.US);
 	
 	public ClockMod() {
-		super(TranslateText.CLOCK, TranslateText.CLOCK_DESCRIPTION);
+		super(Icons.CLOCK_24, TranslateText.CLOCK, TranslateText.CLOCK_DESCRIPTION, "", false);
 	}
 
 	@Override
@@ -81,7 +82,7 @@ public class ClockMod extends SimpleHUDMod {
 		    float textX = center + ((radius / scale) - 6F) * (float) Math.cos(angle);
 		    float textY = center + ((radius / scale) - 6F) * (float) Math.sin(angle);
 		    
-			this.drawCenteredText(numbers[i], textX + 0.5F, textY - 3 + 4, 8, getHudFont(2));
+			this.drawCenteredText(numbers[i], textX, textY + 1, 8, getHudFont(2));
 		}
 		
 	    NVGColor nvgColor = nvg.getColor(this.getFontColor().getRGB());

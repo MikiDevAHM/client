@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -26,7 +27,7 @@ public class JumpCircleMod extends Mod {
 	private boolean jumping;
 	
 	public JumpCircleMod() {
-		super(TranslateText.JUMP_CIRCLE, TranslateText.JUMP_CIRCLE_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.COMPONENT_2_DOUBLE_TAP_SWIPE_UP_24, TranslateText.JUMP_CIRCLE, TranslateText.JUMP_CIRCLE_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@EventTarget

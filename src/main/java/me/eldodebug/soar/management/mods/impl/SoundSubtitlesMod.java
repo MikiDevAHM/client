@@ -23,6 +23,7 @@ import me.eldodebug.soar.management.mods.impl.subtitle.Subtitle;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
@@ -41,7 +42,7 @@ public class SoundSubtitlesMod extends HUDMod {
     private SimpleAnimation backgroundAnimation = new SimpleAnimation(0.0F);
     
 	public SoundSubtitlesMod() {
-		super(TranslateText.SOUND_SUBTITLES, TranslateText.SOUND_SUBTITLES_DESCRIPTION);
+		super(Icons.TEXT_ALIGN_DISTRIBUTED_24, TranslateText.SOUND_SUBTITLES, TranslateText.SOUND_SUBTITLES_DESCRIPTION, "", false);
 		
 		instance = this;
 		
@@ -131,7 +132,7 @@ public class SoundSubtitlesMod extends HUDMod {
             		animationOffsetY = 0;
             	}
             	
-            	this.drawCenteredText(subtitle.getString(), subtitleWidth / 2, animationOffsetY + 4, 9, getHudFont(1), this.getFontColor(opacity));
+            	this.drawCenteredText(subtitle.getString(), subtitleWidth / 2, animationOffsetY + 8, 9, getHudFont(1), this.getFontColor(opacity));
 
 	            if (!flag) {
 	                if (d0 > 0.0D) {

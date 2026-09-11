@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import me.eldodebug.soar.management.mods.settings.impl.*;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.mouse.MouseUtils;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
@@ -43,7 +44,7 @@ public class InternalSettingsMod extends Mod {
 	private final BooleanSetting soundsUISetting = new BooleanSetting(TranslateText.UI_SOUNDS, this, true);
 
 	public InternalSettingsMod() {
-		super(TranslateText.NONE, TranslateText.NONE, ModCategory.OTHER);
+		super(Icons.GLIDE, TranslateText.NONE, TranslateText.NONE, ModCategory.OTHER, "", false);
 
 		instance = this;
 	}

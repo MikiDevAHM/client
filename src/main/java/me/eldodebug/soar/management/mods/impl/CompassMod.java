@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.nanovg.NVGColor;
 import org.lwjgl.nanovg.NanoVG;
 
@@ -33,7 +34,7 @@ public class CompassMod extends SimpleHUDMod {
 	private NumberSetting widthSetting = new NumberSetting(TranslateText.WIDTH, this, 180, 50, 450, true);
 	
 	public CompassMod() {
-		super(TranslateText.COMPASS, TranslateText.COMPASS_DESCRIPTION);
+		super(Icons.COMPASS_NORTHWEST_24, TranslateText.COMPASS, TranslateText.COMPASS_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

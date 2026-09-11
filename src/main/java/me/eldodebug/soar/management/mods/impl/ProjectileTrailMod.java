@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.impl.projectiletrail.ProjectileTrailType;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.entity.projectile.EntityFishHook;
@@ -34,7 +35,7 @@ public class ProjectileTrailMod extends Mod {
     });
     
 	public ProjectileTrailMod() {
-		super(TranslateText.PROJECTILE_TRAIL, TranslateText.PROJECTILE_TRAIL_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.STAR_LINE_HORIZONTAL_3_24, TranslateText.PROJECTILE_TRAIL, TranslateText.PROJECTILE_TRAIL_DESCRIPTION, ModCategory.PLAYER, "", false);
 	}
 
 	@EventTarget

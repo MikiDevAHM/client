@@ -3,6 +3,7 @@
 uniform sampler2D uTex;
 uniform vec2 uResolution;
 uniform float uRadius;
+uniform float uPreserveAlpha;
 
 varying vec4 texCoord;
 
@@ -28,7 +29,7 @@ void main() {
     color += sampleClamped(uTex, uv + vec2(0.0,  texelSize.y)) * 2.0;
 
     color = color / 16.0;
-    color.a = 1.0;
+    color.a = mix(1.0, color.a, uPreserveAlpha);
 
     gl_FragColor = color;
 }

@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.chunk.Chunk;
@@ -15,7 +16,7 @@ public class WeatherDisplayMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public WeatherDisplayMod() {
-		super(TranslateText.WEATHER_DISPLAY, TranslateText.WEATHER_DISPLAY_DESCRIPTION);
+		super(Icons.WEATHER_RAIN_SHOWERS_DAY_24, TranslateText.WEATHER_DISPLAY, TranslateText.WEATHER_DISPLAY_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

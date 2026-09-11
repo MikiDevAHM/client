@@ -3,6 +3,7 @@ package me.eldodebug.soar.gui.gamemenus.views;
 import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.gamemenus.GlideScreen;
 import me.eldodebug.soar.gui.gamemenus.MenuManager;
+import me.eldodebug.soar.gui.gamemenus.ViewMenuButton;
 import me.eldodebug.soar.gui.gamemenus.elements.ElementBackgroundCard;
 import me.eldodebug.soar.management.file.FileManager;
 import me.eldodebug.soar.management.language.TranslateText;
@@ -20,7 +21,13 @@ import me.eldodebug.soar.utils.mouse.Scroll;
 import me.eldodebug.soar.utils.render.GridUtils;
 import net.minecraft.client.gui.ScaledResolution;
 
+import org.lwjgl3.PointerBuffer;
+import org.lwjgl.system.MemoryStack;
+import org.lwjgl.util.tinyfd.TinyFileDialogs;
+import java.nio.ByteBuffer;
 import java.io.File;
+
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -51,6 +58,11 @@ public class BackgroundSelector extends GlideScreen {
 
 	public BackgroundSelector(MenuManager parent) {
 		super(parent, TranslateText.SELECT_BACKGROUND.getText());
+
+        addMenuAction(new ViewMenuButton(Icons.POWER_24, Color.RED, () -> System.exit(0)));
+        addMenuAction(new ViewMenuButton(Icons.ARROW_EXIT_20, Color.ORANGE, () -> setCurrentView(getViewByClass(null))));
+
+
         instance = Glide.getInstance();
         bm = instance.getProfileManager().getBackgroundManager();
         fm = instance.getFileManager();
@@ -170,48 +182,57 @@ public class BackgroundSelector extends GlideScreen {
         new ArrayList<>(cardCustom).forEach(ec -> ec.mouseReleased(mouseX, mouseY, mouseButton));
     }
 
-    public void handleCustomClick(FileManager fm, BackgroundManager bm){
-            Multithreading.runAsync(() -> {
-                File file = FileUtils.selectImageFile();
-                File bgCacheDir = new File(fm.getCacheDir(), "background");
-                CustomBackground addedBG = null;
+    public void handleCustomClick(FileManager fm, BackgroundManager bm) {
+        Multithreading.runAsync(() -> {
+            File file = selectImageFile();
 
-                if (file != null && bgCacheDir.exists() && file.exists()) {
-                    String ext = FileUtils.getExtension(file).toLowerCase();
+            if (file == null || !file.exists()) return;
 
-                    if (ext.equals("png") || ext.equals("jpg") || ext.equals("jpeg")) {
-                        File destFile = new File(bgCacheDir, file.getName());
+            File bgCacheDir = new File(fm.getCacheDir(), "background");
+            if (!bgCacheDir.exists()) bgCacheDir.mkdirs();
 
-                        try {
-                            FileUtils.copyFile(file, destFile);
-                            bm.addCustomBackground(destFile);
+            String ext = FileUtils.getExtension(file).toLowerCase();
 
-                            for (Background backs : bm.getBackgrounds()) {
-                                if (backs instanceof CustomBackground) {
-                                    if (((CustomBackground) backs).getImage() == destFile)
-                                        addedBG = (CustomBackground) backs;
-                                }
+            if (ext.equals("png") || ext.equals("jpg") || ext.equals("jpeg")) {
+                File destFile = new File(bgCacheDir, file.getName());
+
+                try {
+                    FileUtils.copyFile(file, destFile);
+                    bm.addCustomBackground(destFile);
+
+                    CustomBackground addedBG = null;
+                    for (Background backs : bm.getBackgrounds()) {
+                        if (backs instanceof CustomBackground) {
+                            if (((CustomBackground) backs).getImage().equals(destFile)) {
+                                addedBG = (CustomBackground) backs;
                             }
-                            if (addedBG == null) return;
-                            CustomBackground theAddedBG = addedBG;
-                            cardCustom.add(
-                                    new ElementBackgroundCard(
-                                            addedBG, bm,
-                                            0, 0,
-                                            cardWidthDefault, cardheightdefault,
-                                            () -> bm.setCurrentBackground(theAddedBG),
-                                            Icons.DELETE_20,
-                                            () -> deleteCustomBackground(theAddedBG)
-                                    )
-                            );
-                        } catch (IOException e) {
-                            e.printStackTrace();
                         }
                     }
-                }
-            });
-    }
 
+                    if (addedBG == null) return;
+                    CustomBackground theAddedBG = addedBG;
+
+                    ElementBackgroundCard newCard = new ElementBackgroundCard(
+                            addedBG, bm,
+                            0, 0,
+                            cardWidthDefault, cardheightdefault,
+                            () -> bm.setCurrentBackground(theAddedBG),
+                            Icons.DELETE_20,
+                            () -> deleteCustomBackground(theAddedBG)
+                    );
+
+                    if (!cardCustom.isEmpty()) {
+                        cardCustom.add(cardCustom.size() - 1, newCard);
+                    } else {
+                        cardCustom.add(newCard);
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
     public void deleteCustomBackground(Background bg){
         if(bm.getCurrentBackground().equals(bg)) {
             bm.setCurrentBackground(bm.getBackgroundById(0));
@@ -227,5 +248,40 @@ public class BackgroundSelector extends GlideScreen {
         sr = new ScaledResolution(mc);
         columns = Math.min(Math.max(GridUtils.getPossibleColumns(sr.getScaledWidth(), cardWidthDefault, padding), 1), 5);
         super.initGui();
+    }
+
+    /*
+     * if given the option to do this all again
+     * i think id just kill myself instead
+     * imagine having to manually patch tinyfd
+     * and then face your own stupidity of having a folder inside the zip instead of the stuff at root :)
+     * i guess this is a criticism of mac os too
+     */
+    public static File selectImageFile() {
+        String path = null;
+
+        try (MemoryStack stack = MemoryStack.stackPush()) {
+            PointerBuffer filters = stack.mallocPointer(3);
+            filters.put(stack.UTF8("*.png"));
+            filters.put(stack.UTF8("*.jpg"));
+            filters.put(stack.UTF8("*.jpeg"));
+            filters.flip();
+
+            ByteBuffer title = stack.UTF8("Select Wallpaper Image");
+            ByteBuffer defaultPath = stack.UTF8("");
+            ByteBuffer description = stack.UTF8("Image Files (*.png, *.jpg, *.jpeg)");
+
+            path = TinyFileDialogs.tinyfd_openFileDialog(
+                    title,
+                    defaultPath,
+                    filters,
+                    description,
+                    false
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return path != null ? new File(path) : null;
     }
 }

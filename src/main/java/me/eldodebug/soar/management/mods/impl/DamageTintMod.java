@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.PlayerUtils;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 import net.minecraft.client.gui.ScaledResolution;
@@ -23,7 +24,7 @@ public class DamageTintMod extends Mod {
     private NumberSetting healthSetting = new NumberSetting(TranslateText.HEALTH, this, 10, 5, 16, true);
     
 	public DamageTintMod() {
-		super(TranslateText.DAMAGE_TINT, TranslateText.DAMAGE_TINT_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.COLOR_FILL_24, TranslateText.DAMAGE_TINT, TranslateText.DAMAGE_TINT_DESCRIPTION, ModCategory.RENDER, "", false);
 	}
 	
 	@EventTarget

@@ -17,6 +17,7 @@ import me.eldodebug.soar.types.Rect;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.shader.Framebuffer;
+import org.lwjgl.nanovg.NVGLUFramebuffer;
 import org.lwjgl.nanovg.NVGPaint;
 import org.lwjgl.nanovg.NanoVG;
 import org.lwjgl.nanovg.NanoVGGL2;
@@ -32,6 +33,9 @@ public class Blur {
     private static Framebuffer fboHalf = new Framebuffer(Minecraft.getMinecraft().displayWidth / 2, Minecraft.getMinecraft().displayHeight / 2, false);
     private static Framebuffer fboQuart = new Framebuffer(Minecraft.getMinecraft().displayWidth / 4, Minecraft.getMinecraft().displayHeight / 4, false);
     private static Framebuffer fboEighth = new Framebuffer(Minecraft.getMinecraft().displayWidth / 8, Minecraft.getMinecraft().displayHeight / 8, false);
+
+    private static NVGLUFramebuffer transA, transB;
+    private static int transFbWidth, transFbHeight;
 
     private static final Minecraft mc = Minecraft.getMinecraft();
     private static int nvgImage = -1;
@@ -106,6 +110,7 @@ public class Blur {
         shader.uniform(Uniform.makeInt("uTex", 0));
         shader.uniform(Uniform.makeVec2("uResolution", mc.displayWidth, mc.displayHeight));
         shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength / 4f));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 0.0f));
         shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
         shader.detach();
 
@@ -117,6 +122,7 @@ public class Blur {
         shader.uniform(Uniform.makeInt("uTex", 0));
         shader.uniform(Uniform.makeVec2("uResolution", mc.displayWidth / 2f, mc.displayHeight / 2f));
         shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength / 2f));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 0.0f));
         shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
         shader.detach();
 
@@ -128,6 +134,7 @@ public class Blur {
         shader.uniform(Uniform.makeInt("uTex", 0));
         shader.uniform(Uniform.makeVec2("uResolution", mc.displayWidth / 4f, mc.displayHeight / 4f));
         shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 0.0f));
         shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
         shader.detach();
 
@@ -139,6 +146,7 @@ public class Blur {
         shader.uniform(Uniform.makeInt("uTex", 0));
         shader.uniform(Uniform.makeVec2("uResolution", mc.displayWidth / 8f, mc.displayHeight / 8f));
         shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 0.0f));
         shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
         shader.detach();
 
@@ -150,6 +158,7 @@ public class Blur {
         shader.uniform(Uniform.makeInt("uTex", 0));
         shader.uniform(Uniform.makeVec2("uResolution", mc.displayWidth / 4f, mc.displayHeight / 4f));
         shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength / 2));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 0.0f));
         shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
         shader.detach();
 
@@ -181,6 +190,7 @@ public class Blur {
 
         paint.free();
     }
+
 
     public static void drawBlurMod(Rect rect, float radius) {
         drawBlurRounded(rect.x, rect.y, rect.width, rect.height, radius);
@@ -242,4 +252,79 @@ public class Blur {
             drawBlurRect(0, 0, sr.getScaledWidth(), sr.getScaledHeight());
         });
     }
+
+    private static void ensureTransBuffers(long ctx) {
+        if (transA != null && transFbWidth == mc.displayWidth && transFbHeight == mc.displayHeight) {
+            return;
+        }
+
+        if (transA != null) NanoVGGL2.nvgluDeleteFramebuffer(ctx, transA);
+        if (transB != null) NanoVGGL2.nvgluDeleteFramebuffer(ctx, transB);
+
+        transFbWidth = mc.displayWidth;
+        transFbHeight = mc.displayHeight;
+
+        int halfW = Math.max(transFbWidth / 2, 1);
+        int halfH = Math.max(transFbHeight / 2, 1);
+
+        transA = NanoVGGL2.nvgluCreateFramebuffer(ctx, halfW, halfH, 0);
+        transB = NanoVGGL2.nvgluCreateFramebuffer(ctx, halfW, halfH, 0);
+    }
+
+    public static void blurInPlace(NVGLUFramebuffer fb, float strength) {
+        if (!InternalSettingsMod.getInstance().getBlurSetting().isToggled()) return;
+        if (strength <= 0.01f) return;
+
+        long ctx = Glide.getInstance().getNanoVGManager().getContext();
+        ensureTransBuffers(ctx);
+
+        int sourceTexture = fb.texture();
+        int w = mc.displayWidth, h = mc.displayHeight;
+        int halfW = Math.max(w / 2, 1), halfH = Math.max(h / 2, 1);
+
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
+        GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GL11.glDisable(GL11.GL_BLEND);
+        ScaledResolution sr = new ScaledResolution(mc);
+
+        NanoVGGL2.nvgluBindFramebuffer(ctx, transA);
+        GL11.glViewport(0, 0, halfW, halfH);
+        GL13.glActiveTexture(GL13.GL_TEXTURE0);
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, sourceTexture);
+        shader.attach();
+        shader.uniform(Uniform.makeInt("uTex", 0));
+        shader.uniform(Uniform.makeVec2("uResolution", w, h));
+        shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength / 2f));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 1.0f));
+        shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
+        shader.detach();
+
+        NanoVGGL2.nvgluBindFramebuffer(ctx, transB);
+        GL11.glViewport(0, 0, halfW, halfH);
+        GL13.glActiveTexture(GL13.GL_TEXTURE0);
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, transA.texture());
+        shader.attach();
+        shader.uniform(Uniform.makeInt("uTex", 0));
+        shader.uniform(Uniform.makeVec2("uResolution", halfW, halfH));
+        shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 1.0f));
+        shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
+        shader.detach();
+
+        NanoVGGL2.nvgluBindFramebuffer(ctx, fb);
+        GL11.glViewport(0, 0, w, h);
+        GL13.glActiveTexture(GL13.GL_TEXTURE0);
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, transB.texture());
+        shader.attach();
+        shader.uniform(Uniform.makeInt("uTex", 0));
+        shader.uniform(Uniform.makeVec2("uResolution", halfW, halfH));
+        shader.uniform(Uniform.makeFloat("uRadius", 0.5f * strength));
+        shader.uniform(Uniform.makeFloat("uPreserveAlpha", 1.0f));
+        shader.rect(0f, 0f, sr.getScaledWidth(), sr.getScaledHeight());
+        shader.detach();
+
+        mc.getFramebuffer().bindFramebuffer(true);
+        GL11.glPopAttrib();
+    }
+
 }

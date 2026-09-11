@@ -8,12 +8,8 @@ import me.eldodebug.soar.management.nanovg.font.Fonts;
 
 public class SimpleHUDMod extends HUDMod {
 
-	public SimpleHUDMod(TranslateText nameTranslate, TranslateText descriptionText) {
-		super(nameTranslate, descriptionText);
-	}
-
-	public SimpleHUDMod(TranslateText nameTranslate, TranslateText descriptionText, String alias) {
-		super(nameTranslate, descriptionText, alias);
+	public SimpleHUDMod(String icon, TranslateText nameTranslate, TranslateText descriptionText, String alias, boolean restricted) {
+		super(icon, nameTranslate, descriptionText, alias, restricted);
 	}
 
 	public void draw() {

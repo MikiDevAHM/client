@@ -2,6 +2,7 @@
   "package": "me.eldodebug.soar.injection.mixin.mixins",
   "refmap": "mixins.soar.refmap.json",
   "compatibilityLevel": "JAVA_8",
+  "verbose": false,
   "mixins": [
     "audio.MixinSoundManager",
     "block.MixinBlockFluidRenderer",

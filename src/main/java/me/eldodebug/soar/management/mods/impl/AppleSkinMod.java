@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.Random;
 import java.util.Vector;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.injection.interfaces.IMixinGuiIngame;
@@ -33,7 +34,7 @@ public class AppleSkinMod extends Mod {
     private byte alphaDir = 1;
     
 	public AppleSkinMod() {
-		super(TranslateText.APPLE_SKIN, TranslateText.APPLE_SKIN_DESCRIPTION, ModCategory.PLAYER);
+		super(Icons.FOOD_24, TranslateText.APPLE_SKIN, TranslateText.APPLE_SKIN_DESCRIPTION, ModCategory.PLAYER, "Food", false);
 	}
 
 	@EventTarget

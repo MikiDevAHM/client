@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -21,7 +22,7 @@ public class QuickSwitchMod extends Mod {
 	private KeybindSetting bowSetting = new KeybindSetting(TranslateText.BOW, this, Keyboard.KEY_NONE);
 	
 	public QuickSwitchMod() {
-		super(TranslateText.QUICK_SWITCH, TranslateText.QUICK_SWITCH_DESCRIPTION, ModCategory.PLAYER,"itemhotkey", true);
+		super(Icons.TABLE_SWITCH_24, TranslateText.QUICK_SWITCH, TranslateText.QUICK_SWITCH_DESCRIPTION, ModCategory.PLAYER,"itemhotkey", true);
 	}
 	
 	@EventTarget

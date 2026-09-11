@@ -2,6 +2,7 @@ package me.eldodebug.soar.management.mods.impl;
 
 import java.awt.Color;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -54,7 +55,7 @@ public class BlockOverlayMod extends Mod {
     private ColorSetting outlineColorSetting = new ColorSetting(TranslateText.OUTLINE_COLOR, this, Color.RED, false);
     
 	public BlockOverlayMod() {
-		super(TranslateText.BLOCK_OVERLAY, TranslateText.BLOCK_OVERLAY_DESCRIPTION, ModCategory.RENDER, "blockoutline");
+		super(Icons.CUBE_24, TranslateText.BLOCK_OVERLAY, TranslateText.BLOCK_OVERLAY_DESCRIPTION, ModCategory.RENDER, "blockoutline", false);
 	}
 	
 	@EventTarget

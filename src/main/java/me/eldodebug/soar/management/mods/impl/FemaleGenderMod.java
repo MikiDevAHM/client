@@ -4,14 +4,14 @@ import me.eldodebug.soar.discord.DiscordRPC;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class FemaleGenderMod extends Mod {
 
 	private static FemaleGenderMod instance;
 
 	public FemaleGenderMod() {
-		super(TranslateText.FEMALE_GENDER, TranslateText.FEMALE_GENDER_DESCRIPTION, ModCategory.PLAYER, "boobs");
-		// invalid
+		super(Icons.BALLOON_24, TranslateText.FEMALE_GENDER, TranslateText.FEMALE_GENDER_DESCRIPTION, ModCategory.PLAYER, "boobs", false);
 		instance = this;
 	}
 

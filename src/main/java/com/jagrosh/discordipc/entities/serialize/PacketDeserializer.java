@@ -1,4 +1,4 @@
-package me.eldodebug.soar.discord.ipc.entities.serialize;
+package com.jagrosh.discordipc.entities.serialize;
 
 import java.lang.reflect.Type;
 
@@ -8,7 +8,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
-import me.eldodebug.soar.discord.ipc.entities.Packet;
+import com.jagrosh.discordipc.entities.Packet;
 
 public class PacketDeserializer implements JsonDeserializer<Packet> {
 

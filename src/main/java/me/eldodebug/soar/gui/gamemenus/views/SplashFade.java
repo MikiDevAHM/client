@@ -60,7 +60,7 @@ public class SplashFade extends GlideScreen {
             double progress = iconAnimation.getValue();
             float iconSize = MathUtils.interpolateFloat(130f, 18f, progress);
             float iconX = MathUtils.interpolateFloat(sr.getScaledWidth() / 2f, 19F, progress);
-            float iconY = MathUtils.interpolateFloat(sr.getScaledHeight() / 2f, 19f, progress);
+            float iconY = MathUtils.interpolateFloat(sr.getScaledHeight() / 2f, 17f, progress);
 
             nvg.drawRect(0, 0, sr.getScaledWidth(), sr.getScaledHeight(), new Color(0, 0, 0, fadeBackgroundAnimation != null ? (int) (255 - (fadeBackgroundAnimation.getValue() * 255)) : 255));
             nvg.drawCenteredTextWithShadow(Icons.GLIDE, iconX, iconY, new Color(255, 255, 255, 255).getRGB(), 5, iconSize, Fonts.ICON_OUTLINE); // size 130

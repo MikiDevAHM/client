@@ -2,6 +2,7 @@ package me.eldodebug.soar.utils.buffer;
 
 import java.nio.FloatBuffer;
 
+import eu.shoroa.contrib.render.Blur;
 import org.lwjgl.nanovg.NVGLUFramebuffer;
 import org.lwjgl.nanovg.NVGPaint;
 import org.lwjgl.nanovg.NanoVG;
@@ -21,6 +22,69 @@ public class ScreenAnimation {
 
 	private int fbWidth, fbHeight;
 	private NVGLUFramebuffer fb;
+
+	public void wrap(Runnable glRender, Runnable task, float x, float y, float width, float height, float animationProgress, float alphaProgress, boolean stencil, float blurStrength) {
+
+		ScaledResolution sr = new ScaledResolution(mc);
+		NanoVGManager nvg = Glide.getInstance().getNanoVGManager();
+		int factor = sr.getScaleFactor();
+
+		if(fbWidth != mc.displayWidth || fbHeight != mc.displayHeight) {
+			close();
+		}
+
+		if (fb == null) {
+			fbWidth = mc.displayWidth;
+			fbHeight = mc.displayHeight;
+			fb = NanoVGGL2.nvgluCreateFramebuffer(nvg.getContext(), mc.displayWidth, mc.displayHeight, 0);
+		}
+
+		NanoVGGL2.nvgluBindFramebuffer(nvg.getContext(), fb);
+
+		GL11.glViewport(0, 0, mc.displayWidth, mc.displayHeight);
+
+		FloatBuffer floaty = BufferUtils.createFloatBuffer(16);
+
+		GlStateManager.enableTexture2D();;
+
+		GL11.glGetFloat(GL11.GL_COLOR_CLEAR_VALUE, floaty);
+
+		GL11.glClearColor(0, 0, 0, 0);
+		GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
+
+		GL11.glClearColor(floaty.get(0), floaty.get(1), floaty.get(2), floaty.get(3));
+
+		nvg.setupAndDraw(task);
+
+		if (blurStrength > 0.01f) {
+			Blur.blurInPlace(fb, blurStrength);
+		}
+
+		if(glRender != null) {
+			glRender.run();
+		}
+
+		mc.getFramebuffer().bindFramebuffer(true);
+
+		nvg.setupAndDraw(() -> {
+
+			nvg.setAlpha(Math.min(alphaProgress, 1.0F));
+			nvg.scale(x * factor, y * factor, width * factor, height * factor, animationProgress);
+
+			NVGPaint paint = NVGPaint.create();
+
+			NanoVG.nvgBeginPath(nvg.getContext());
+
+			if(stencil) {
+				NanoVG.nvgRect(nvg.getContext(), x * factor, y * factor, width * factor, height * factor);
+			}else {
+				NanoVG.nvgRect(nvg.getContext(), 0, 0, mc.displayWidth, mc.displayHeight);
+			}
+
+			NanoVG.nvgFillPaint(nvg.getContext(), NanoVG.nvgImagePattern(nvg.getContext(), 0, 0, mc.displayWidth,  mc.displayHeight, 0, fb.image(), 1, paint));
+			NanoVG.nvgFill(nvg.getContext());
+		}, false);
+	}
 
 	public void wrap(Runnable glRender, Runnable task, float x, float y, float width, float height, float animationProgress, float alphaProgress, boolean stencil) {
 

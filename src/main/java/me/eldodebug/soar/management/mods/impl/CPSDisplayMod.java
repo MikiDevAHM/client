@@ -3,6 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import java.util.ArrayList;
 
 import me.eldodebug.soar.management.event.impl.EventNVG;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Mouse;
 
 import me.eldodebug.soar.management.event.EventTarget;
@@ -23,7 +24,7 @@ public class CPSDisplayMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public CPSDisplayMod() {
-		super(TranslateText.CPS_DISPLAY, TranslateText.CPS_DISPLAY_DESCRIPTION);
+		super(Icons.CURSOR_CLICK_24, TranslateText.CPS_DISPLAY, TranslateText.CPS_DISPLAY_DESCRIPTION, "", false);
 	}
 	
 	@EventTarget

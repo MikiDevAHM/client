@@ -12,6 +12,7 @@ import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.ColorSetting;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.ColorUtils;
 
 public class GlintColorMod extends Mod {
@@ -24,7 +25,7 @@ public class GlintColorMod extends Mod {
 	private ColorSetting colorSetting = new ColorSetting(TranslateText.COLOR, this, Color.RED, false);	
 	
 	public GlintColorMod() {
-		super(TranslateText.GLINT_COLOR, TranslateText.GLINT_COLOR_DESCRIPTION, ModCategory.RENDER, "changeru");
+		super(Icons.LAYER_24, TranslateText.GLINT_COLOR, TranslateText.GLINT_COLOR_DESCRIPTION, ModCategory.RENDER, "changeru", false);
 		
 		instance = this;
 	}

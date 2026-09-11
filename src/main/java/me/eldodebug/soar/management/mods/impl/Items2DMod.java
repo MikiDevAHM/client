@@ -4,6 +4,7 @@ import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.notification.Notification;
 import me.eldodebug.soar.management.notification.NotificationType;
 
@@ -12,7 +13,7 @@ public class Items2DMod extends Mod {
 	private static Items2DMod instance;
 	
 	public Items2DMod() {
-		super(TranslateText.ITEMS_2D, TranslateText.ITEMS_2D_DESCRIPTION, ModCategory.RENDER);
+		super(Icons.SQUARE_MULTIPLE_24, TranslateText.ITEMS_2D, TranslateText.ITEMS_2D_DESCRIPTION, ModCategory.RENDER, "", false);
 		
 		instance = this;
 	}

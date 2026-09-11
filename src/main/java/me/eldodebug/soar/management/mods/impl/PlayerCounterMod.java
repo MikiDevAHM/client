@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.SimpleHUDMod;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 
 public class PlayerCounterMod extends SimpleHUDMod {
@@ -13,7 +14,7 @@ public class PlayerCounterMod extends SimpleHUDMod {
 	private BooleanSetting iconSetting = new BooleanSetting(TranslateText.ICON, this, true);
 	
 	public PlayerCounterMod() {
-		super(TranslateText.PLAYER_COUNTER, TranslateText.PLAYER_COUNTER_DESCRIPTION);
+		super(Icons.PERSON_ADD_24, TranslateText.PLAYER_COUNTER, TranslateText.PLAYER_COUNTER_DESCRIPTION, "", false);
 	}
 
 	@EventTarget

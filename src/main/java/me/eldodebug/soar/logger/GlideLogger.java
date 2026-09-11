@@ -11,17 +11,17 @@ public class GlideLogger {
     	logger.info("[GC/INFO] " + message);
     }
     
-    public static void warn(String message) {
-    	logger.warn("[GC/WARN] " + message);
-    }
+    public static void warn(String message) {logger.warn("[GC/WARN] " + message);}
+
+    public static void warn(String message, Throwable t) {logger.warn("[GC/WARN] " + message, t);}
 
     public static void error(String message) {
     	logger.error("[GC/ERROR] " + message);
     }
     
-    public static void error(String message, Exception e) {
-    	logger.error("[GC/ERROR] " + message, e);
-    }
+    public static void error(String message, Exception e) {logger.error("[GC/ERROR] " + message, e);}
+
+    public static void error(String message, Throwable t) {logger.error("[GC/ERROR] " + message, t);}
 
 	public static Logger getLogger() {
 		return logger;

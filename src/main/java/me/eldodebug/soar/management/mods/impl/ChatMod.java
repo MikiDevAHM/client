@@ -5,6 +5,7 @@ import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.BooleanSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class ChatMod extends Mod {
 
@@ -20,7 +21,7 @@ public class ChatMod extends Mod {
 	private BooleanSetting compactSetting = new BooleanSetting(TranslateText.COMPACT, this, false);
 	
 	public ChatMod() {
-		super(TranslateText.CHAT, TranslateText.CHAT_DESCRIPTION, ModCategory.OTHER, "betterchatting");
+		super(Icons.CHAT_SETTINGS_24, TranslateText.CHAT, TranslateText.CHAT_DESCRIPTION, ModCategory.OTHER, "betterchatting", false);
 		
 		instance = this;
 	}

@@ -11,6 +11,7 @@ import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.types.Rect;
 import me.eldodebug.soar.utils.TargetUtils;
@@ -45,7 +46,7 @@ public class TargetInfoMod extends HUDMod {
     private float x, y, w, h;
 
     public TargetInfoMod() {
-        super(TranslateText.TARGET_INFO, TranslateText.TARGET_INFO_DESCRIPTION, "targethud", true);
+        super(Icons.PERSON_NOTE_24, TranslateText.TARGET_INFO, TranslateText.TARGET_INFO_DESCRIPTION, "targethud", true);
     }
 
     @Override

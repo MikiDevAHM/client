@@ -6,6 +6,7 @@ import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;
 import me.eldodebug.soar.management.mods.ModCategory;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
+import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class SoundModifierMod extends Mod {
 
@@ -18,7 +19,7 @@ public class SoundModifierMod extends Mod {
 	private NumberSetting fireworksSetting = new NumberSetting(TranslateText.FIREWORKS, this, 100, 0, 100, true);
 	
 	public SoundModifierMod() {
-		super(TranslateText.SOUND_MODIFIER, TranslateText.SOUND_MODIFIER_DESCRIPTION, ModCategory.OTHER);
+		super(Icons.HEADPHONES_SOUND_WAVE_24, TranslateText.SOUND_MODIFIER, TranslateText.SOUND_MODIFIER_DESCRIPTION, ModCategory.OTHER, "", false);
 	}
 
 	@EventTarget

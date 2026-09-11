@@ -1,5 +1,6 @@
 package me.eldodebug.soar.management.mods.impl;
 
+import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
 import me.eldodebug.soar.Glide;
@@ -28,7 +29,7 @@ public class PlayerPredicatorMod extends Mod {
 	private boolean isActive;
 	
 	public PlayerPredicatorMod() {
-		super(TranslateText.PLAYER_PREDICATOR, TranslateText.PLAYER_PREDICATOR_DESCRIPTION, ModCategory.WORLD, "", true);
+		super(Icons.PREDICTIONS_24, TranslateText.PLAYER_PREDICATOR, TranslateText.PLAYER_PREDICATOR_DESCRIPTION, ModCategory.WORLD, "", true);
 	}
 
 	@EventTarget
