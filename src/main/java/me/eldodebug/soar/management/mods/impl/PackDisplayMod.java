@@ -3,11 +3,9 @@ package me.eldodebug.soar.management.mods.impl;
 import java.io.IOException;
 import java.util.List;
 
-import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.injection.interfaces.IMixinMinecraft;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventNVG;
-import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.event.impl.EventSwitchTexture;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;

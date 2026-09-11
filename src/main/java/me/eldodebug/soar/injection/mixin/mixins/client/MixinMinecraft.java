@@ -2,8 +2,8 @@ package me.eldodebug.soar.injection.mixin.mixins.client;
 
 import eu.shoroa.contrib.animation.Animate;
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.Glide;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.GuiSplashScreen;
 import me.eldodebug.soar.gui.gamemenus.MenuManager;
 import me.eldodebug.soar.injection.interfaces.IMixinEntityLivingBase;
@@ -240,7 +240,7 @@ public abstract class MixinMinecraft implements IMixinMinecraft {
     
     @Inject(method = "updateDisplay", at = @At("HEAD"))
     public void onUpdateDisplay(CallbackInfo ci) {
-    	if(Glide.getInstance().getEventManager() != null) {
+    	if(Glide.getInstance().hasStarted()) {
     		new EventUpdateDisplay().call();
     	}
     }
@@ -252,7 +252,7 @@ public abstract class MixinMinecraft implements IMixinMinecraft {
 	
     @Inject(method = "updateFramebufferSize", at = @At("HEAD"))
     private void onUpdateFramebufferSize(CallbackInfo ci) {
-    	if(Glide.getInstance().getEventManager() != null) {
+    	if(Glide.getInstance().hasStarted()) {
         	new EventUpdateFramebufferSize().call();
     	}
     }

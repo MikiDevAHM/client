@@ -6,7 +6,6 @@ import me.eldodebug.soar.management.event.impl.EventNVG;
 import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
-import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventLoadWorld;
 import me.eldodebug.soar.management.event.impl.EventRender2D;
@@ -15,7 +14,6 @@ import me.eldodebug.soar.management.mods.HUDMod;
 import me.eldodebug.soar.management.mods.impl.minimap.ChunkAtlas;
 import me.eldodebug.soar.management.mods.impl.minimap.ChunkTile;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
-import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.utils.GlUtils;
 import me.eldodebug.soar.utils.buffer.ScreenStencil;
 import me.eldodebug.soar.utils.render.RenderUtils;

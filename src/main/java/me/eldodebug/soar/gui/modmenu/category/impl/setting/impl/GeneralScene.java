@@ -1,6 +1,6 @@
 package me.eldodebug.soar.gui.modmenu.category.impl.setting.impl;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.modmenu.category.impl.SettingCategory;
 import me.eldodebug.soar.gui.modmenu.category.impl.setting.SettingScene;
 import me.eldodebug.soar.management.color.ColorManager;
@@ -11,7 +11,6 @@ import me.eldodebug.soar.management.mods.impl.InternalSettingsMod;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
 import me.eldodebug.soar.management.nanovg.font.Icons;
-import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.ui.comp.Comp;
 import me.eldodebug.soar.ui.comp.impl.CompKeybind;
 import me.eldodebug.soar.ui.comp.impl.CompToggleButton;

@@ -6,11 +6,8 @@ import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.color.AccentColor;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventNVG;
-import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
-import me.eldodebug.soar.management.nanovg.NanoVGManager;
-import me.eldodebug.soar.management.nanovg.font.Fonts;
 import me.eldodebug.soar.management.nanovg.font.Icons;
 
 public class CalendarMod extends HUDMod {
@@ -20,7 +17,7 @@ public class CalendarMod extends HUDMod {
 	public CalendarMod() {
 		super(Icons.CALENDAR_LTR_24, TranslateText.CALENDAR, TranslateText.CALENDAR_DESCRIPTION, "", false);
 	}
-	
+
 	@EventTarget
 	public void onRender2D(EventNVG event) {
 		Calendar calendar = Calendar.getInstance();

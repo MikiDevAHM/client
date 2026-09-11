@@ -9,7 +9,7 @@ import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.nanovg.NVGColor;
 import org.lwjgl.nanovg.NanoVG;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.language.TranslateText;
@@ -19,7 +19,6 @@ import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;
 import me.eldodebug.soar.management.mods.settings.impl.NumberSetting;
 import me.eldodebug.soar.management.mods.settings.impl.combo.Option;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
-import me.eldodebug.soar.management.nanovg.font.Fonts;
 import me.eldodebug.soar.management.nanovg.font.LegacyIcon;
 import me.eldodebug.soar.utils.buffer.ScreenStencil;
 import net.minecraft.util.MathHelper;
@@ -67,7 +66,7 @@ public class CompassMod extends SimpleHUDMod {
 		int angle6 = (int) MathHelper.wrapAngleTo180_float(mc.thePlayer.rotationYaw) * -1 - 360;
 		int width = widthSetting.getValueInt();
 		
-		this.renderMarker(this.getX() + ((width / 2) * this.getScale()), this.getY() + (2.5F * this.getScale()), this.getFontColor());
+		this.renderMarker(this.getX() + ((width / 2f) * this.getScale()), this.getY() + (2.5F * this.getScale()), this.getFontColor());
 		
 		for(int i = 0; i<=2; i++) {
 			
@@ -87,15 +86,15 @@ public class CompassMod extends SimpleHUDMod {
 					s = "E";
 				}
 				
-				this.drawRect((width / 2) + angle - 2F, 8, 0.8F, 9);
+				this.drawRect((width / 2f) + angle - 2F, 8, 0.8F, 9);
 				
-				this.drawRect((width / 2) + angle + 12F, 8, 0.8F, 6);
-				this.drawRect((width / 2) + angle + 26F, 8, 0.8F, 6);
+				this.drawRect((width / 2f) + angle + 12F, 8, 0.8F, 6);
+				this.drawRect((width / 2f) + angle + 26F, 8, 0.8F, 6);
 				
-				this.drawRect((width / 2) + angle - 16F, 8, 0.8F, 6);
-				this.drawRect((width / 2) + angle - 30F, 8, 0.8F, 6);
+				this.drawRect((width / 2f) + angle - 16F, 8, 0.8F, 6);
+				this.drawRect((width / 2f) + angle - 30F, 8, 0.8F, 6);
 				
-				this.drawCenteredText(s, (width / 2) + angle - 1.5F, 19 + 4.25f, 8.5F, getHudFont(2));
+				this.drawCenteredText(s, (width / 2f) + angle - 1.5F, 19 + 4.25f, 8.5F, getHudFont(2));
 	            
 				angle+= 90;
 			}
@@ -117,7 +116,7 @@ public class CompassMod extends SimpleHUDMod {
 				}
 				
 				
-				this.drawCenteredText(s, (width / 2) + angle2 + 43F, 8.5F + 3.4f, 6.8F, getHudFont(1));
+				this.drawCenteredText(s, (width / 2f) + angle2 + 43F, 8.5F + 3.4f, 6.8F, getHudFont(1));
 				
 				angle2+= 90;
 			}
@@ -138,7 +137,7 @@ public class CompassMod extends SimpleHUDMod {
 					s = "285";
 				}
 				
-				this.drawCenteredText(s, (width / 2) + angle3 + 13F, 17 + 2.7f, 5.4F, getHudFont(1));
+				this.drawCenteredText(s, (width / 2f) + angle3 + 13F, 17 + 2.7f, 5.4F, getHudFont(1));
 				
 				angle3+= 90;
 			}
@@ -159,7 +158,7 @@ public class CompassMod extends SimpleHUDMod {
 					s = "300";
 				}
 				
-				this.drawCenteredText(s, (width / 2) + angle4 + 27F,17 + 2.7f, 5.4F, getHudFont(1));
+				this.drawCenteredText(s, (width / 2f) + angle4 + 27F,17 + 2.7f, 5.4F, getHudFont(1));
 			
 				angle4+= 90;
 			}
@@ -180,7 +179,7 @@ public class CompassMod extends SimpleHUDMod {
 					s = "300";
 				}
 				
-				this.drawCenteredText(s, (width / 2) + angle5 + 60.5F, 17 + 2.7f, 5.4F, getHudFont(1));
+				this.drawCenteredText(s, (width / 2f) + angle5 + 60.5F, 17 + 2.7f, 5.4F, getHudFont(1));
 			
 				angle5+= 90;
 			}
@@ -201,7 +200,7 @@ public class CompassMod extends SimpleHUDMod {
 					s = "345";
 				}
 				
-				this.drawCenteredText(s, (width / 2) + angle6 + 74.5F, 17 + 2.7f, 5.4F, getHudFont(1));
+				this.drawCenteredText(s, (width / 2f) + angle6 + 74.5F, 17 + 2.7f, 5.4F, getHudFont(1));
 				
 				angle6+= 90;
 			}

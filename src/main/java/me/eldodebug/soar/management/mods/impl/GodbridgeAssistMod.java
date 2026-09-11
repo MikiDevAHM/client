@@ -1,9 +1,8 @@
 package me.eldodebug.soar.management.mods.impl;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventNVG;
-import me.eldodebug.soar.management.event.impl.EventRender2D;
 import me.eldodebug.soar.management.event.impl.EventTick;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.HUDMod;
@@ -76,7 +75,7 @@ public class GodbridgeAssistMod extends HUDMod {
             int alpha = (int) ((Math.abs(Math.abs((double) mc.thePlayer.rotationYaw % 90.0D) - 45.0D) / 5) * 255);
             int round = (int) ((Math.abs(Math.abs((double) mc.thePlayer.rotationYaw % 90.0D) - 45.0D) / 5) * 360);
             
-            nvg.drawArc(sr.getScaledWidth() / 2, sr.getScaledHeight() / 2, 12, -90, round, 1.6F, this.getFontColor(alpha));
+            nvg.drawArc(sr.getScaledWidth() / 2f, sr.getScaledHeight() / 2f, 12, -90, round, 1.6F, this.getFontColor(alpha));
         }
 	}
 }
