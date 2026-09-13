@@ -1,6 +1,6 @@
 package me.eldodebug.soar.gui.gamemenus.backgrounds;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.gamemenus.backgrounds.impl.AbstractBackground;
 import me.eldodebug.soar.gui.gamemenus.backgrounds.impl.CustomBackgroundRenderer;
 import me.eldodebug.soar.gui.gamemenus.backgrounds.impl.DefaultBackgroundRenderer;

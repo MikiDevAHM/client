@@ -6,7 +6,7 @@ import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.GuiWaypoint;
 import me.eldodebug.soar.injection.interfaces.IMixinRenderManager;
 import me.eldodebug.soar.management.event.EventTarget;

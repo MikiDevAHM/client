@@ -2,7 +2,7 @@ package me.eldodebug.soar.management.color.palette;
 
 import java.awt.Color;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.color.Theme;
 import me.eldodebug.soar.utils.animation.ColorAnimation;
 

@@ -7,7 +7,7 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.mods.impl.AsyncScreenshotMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.event.ClickEvent;

@@ -2,7 +2,7 @@ package me.eldodebug.soar.gui.mainmenu.impl;
 
 import java.awt.Color;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.mainmenu.GuiGlideMainMenu;
 import me.eldodebug.soar.gui.mainmenu.MainMenuScene;
 import me.eldodebug.soar.gui.mainmenu.widget.WidgetPlayButton;

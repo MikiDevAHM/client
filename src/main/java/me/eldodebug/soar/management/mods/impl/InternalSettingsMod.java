@@ -9,7 +9,7 @@ import me.eldodebug.soar.utils.mouse.MouseUtils;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventKey;
 import me.eldodebug.soar.management.language.TranslateText;

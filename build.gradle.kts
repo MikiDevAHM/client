@@ -111,7 +111,6 @@ dependencies {
     embed("com.github.oshi:oshi-core:6.9.0") {
         exclude(module = "slf4j-api")
     }
-    testImplementation(kotlin("test"))
 }
 
 mixin {

@@ -4,13 +4,13 @@ import java.awt.*;
 import java.net.URI;
 
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.mainmenu.GuiGlideMainMenu;
 import me.eldodebug.soar.management.remote.update.Update;
 import me.eldodebug.soar.utils.mouse.MouseUtils;
 import org.lwjgl.input.Keyboard;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.mainmenu.MainMenuScene;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;

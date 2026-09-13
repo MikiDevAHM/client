@@ -1,7 +1,7 @@
 package me.eldodebug.soar.gui;
 
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
