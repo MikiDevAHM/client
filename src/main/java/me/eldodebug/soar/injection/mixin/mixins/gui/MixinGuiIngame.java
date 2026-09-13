@@ -1,7 +1,7 @@
 package me.eldodebug.soar.injection.mixin.mixins.gui;
 
 import eu.shoroa.contrib.render.Blur;
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.GuiEditHUD;
 import me.eldodebug.soar.gui.modmenu.GuiModMenu;
 import me.eldodebug.soar.injection.interfaces.IMixinGuiIngame;

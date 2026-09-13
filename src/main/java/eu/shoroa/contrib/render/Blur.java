@@ -7,7 +7,7 @@ package eu.shoroa.contrib.render;
 
 import eu.shoroa.contrib.shader.UIShader;
 import eu.shoroa.contrib.shader.uniform.Uniform;
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.impl.InternalSettingsMod;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;

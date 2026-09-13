@@ -2,7 +2,7 @@ package me.eldodebug.soar.injection.mixin.mixins.gui;
 
 import java.io.IOException;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.mods.impl.InternalSettingsMod;
 import me.eldodebug.soar.utils.Sound;
 import org.lwjgl.input.Keyboard;

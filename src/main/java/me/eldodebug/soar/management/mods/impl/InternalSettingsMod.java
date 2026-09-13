@@ -6,7 +6,7 @@ import java.util.Arrays;
 import me.eldodebug.soar.management.mods.settings.impl.*;
 import org.lwjgl.input.Keyboard;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventKey;
 import me.eldodebug.soar.management.language.TranslateText;

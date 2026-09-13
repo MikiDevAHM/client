@@ -2,7 +2,7 @@ package me.eldodebug.soar.management.event;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 
 public abstract class Event {
 
