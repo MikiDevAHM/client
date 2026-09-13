@@ -1,7 +1,7 @@
 package me.eldodebug.soar.gui.gamemenus.views;
 
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.Glide;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.gamemenus.GlideScreen;
 import me.eldodebug.soar.gui.gamemenus.MenuManager;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;

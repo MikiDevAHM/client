@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.event.impl.EventText;
 import net.minecraft.client.gui.FontRenderer;
 

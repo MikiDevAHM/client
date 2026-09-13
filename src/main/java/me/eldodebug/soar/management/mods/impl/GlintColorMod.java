@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.color.AccentColor;
 import me.eldodebug.soar.management.language.TranslateText;
 import me.eldodebug.soar.management.mods.Mod;

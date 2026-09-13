@@ -3,7 +3,7 @@ package me.eldodebug.soar.management.mods.impl;
 import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.injection.interfaces.IMixinS14PacketEntity;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventReceivePacket;

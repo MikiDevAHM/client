@@ -1,6 +1,6 @@
 package me.eldodebug.soar.gui.modmenu.category.impl.game.impl;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.modmenu.category.impl.GamesCategory;
 import me.eldodebug.soar.gui.modmenu.category.impl.game.GameScene;
 import me.eldodebug.soar.management.color.AccentColor;

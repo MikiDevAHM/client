@@ -11,7 +11,7 @@ import me.eldodebug.soar.management.mods.impl.InternalSettingsMod;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.color.palette.ColorPalette;
 import me.eldodebug.soar.management.color.palette.ColorType;
 import me.eldodebug.soar.management.event.impl.EventRender2D;
