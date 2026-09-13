@@ -1,4 +1,4 @@
-package com.glideclient
+package me.eldodebug.soar
 
 object GlideMeta {
 

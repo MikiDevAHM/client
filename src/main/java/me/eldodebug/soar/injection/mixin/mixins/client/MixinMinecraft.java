@@ -2,8 +2,8 @@ package me.eldodebug.soar.injection.mixin.mixins.client;
 
 import eu.shoroa.contrib.animation.Animate;
 import eu.shoroa.contrib.render.Blur;
-import com.glideclient.Glide;
-import com.glideclient.GlideMeta;
+import me.eldodebug.soar.Glide;
+import me.eldodebug.soar.GlideMeta;
 import me.eldodebug.soar.gui.GuiSplashScreen;
 import me.eldodebug.soar.gui.gamemenus.MenuManager;
 import me.eldodebug.soar.injection.interfaces.IMixinEntityLivingBase;

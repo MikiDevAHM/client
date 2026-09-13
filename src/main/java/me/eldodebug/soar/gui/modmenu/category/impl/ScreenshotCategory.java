@@ -3,7 +3,7 @@ package me.eldodebug.soar.gui.modmenu.category.impl;
 import java.awt.Desktop;
 import java.io.IOException;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.modmenu.GuiModMenu;
 import me.eldodebug.soar.gui.modmenu.category.Category;
 import me.eldodebug.soar.management.color.AccentColor;

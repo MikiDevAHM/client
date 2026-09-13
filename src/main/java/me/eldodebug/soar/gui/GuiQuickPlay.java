@@ -5,7 +5,7 @@ import java.io.IOException;
 import eu.shoroa.contrib.render.Blur;
 import org.lwjgl.input.Keyboard;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.color.palette.ColorPalette;
 import me.eldodebug.soar.management.color.palette.ColorType;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;

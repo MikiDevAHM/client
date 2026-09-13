@@ -2,7 +2,7 @@ package me.eldodebug.soar.ui.comp.impl;
 
 import java.awt.Color;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.color.AccentColor;
 import me.eldodebug.soar.management.color.ColorManager;
 import me.eldodebug.soar.management.mods.settings.impl.ComboSetting;

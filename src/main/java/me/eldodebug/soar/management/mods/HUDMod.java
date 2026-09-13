@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.io.File;
 
 import eu.shoroa.contrib.render.Blur;
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.GuiEditHUD;
 import me.eldodebug.soar.management.color.AccentColor;
 import me.eldodebug.soar.management.color.ColorManager;

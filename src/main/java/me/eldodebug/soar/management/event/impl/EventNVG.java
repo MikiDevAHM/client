@@ -1,6 +1,6 @@
 package me.eldodebug.soar.management.event.impl;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.event.Event;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 
