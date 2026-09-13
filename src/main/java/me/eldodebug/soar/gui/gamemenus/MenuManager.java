@@ -1,8 +1,8 @@
 package me.eldodebug.soar.gui.gamemenus;
 
 import eu.shoroa.contrib.render.Blur;
-import me.eldodebug.soar.Glide;
-import me.eldodebug.soar.GlideMeta;
+import com.glideclient.Glide;
+import com.glideclient.GlideMeta;
 import me.eldodebug.soar.gui.gamemenus.backgrounds.BackgroundsHandler;
 import me.eldodebug.soar.gui.gamemenus.views.BackgroundSelector;
 import me.eldodebug.soar.gui.gamemenus.views.MainMenuClassic;

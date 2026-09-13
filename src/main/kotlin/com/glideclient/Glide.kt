@@ -1,4 +1,4 @@
-package me.eldodebug.soar
+package com.glideclient
 
 import java.io.File
 

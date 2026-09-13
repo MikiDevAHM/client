@@ -7,7 +7,7 @@ import eu.shoroa.contrib.render.Blur;
 import me.eldodebug.soar.utils.mouse.Scroll;
 import org.lwjgl.input.Keyboard;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.color.ColorManager;
 import me.eldodebug.soar.management.color.palette.ColorPalette;
 import me.eldodebug.soar.management.color.palette.ColorType;

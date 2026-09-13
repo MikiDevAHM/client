@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.logger.GlideLogger;
 import me.eldodebug.soar.management.color.ColorManager;
 import me.eldodebug.soar.management.color.Theme;

@@ -12,7 +12,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.file.FileManager;
 import me.eldodebug.soar.utils.JsonUtils;
 import me.eldodebug.soar.utils.file.FileUtils;

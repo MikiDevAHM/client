@@ -2,7 +2,7 @@ package me.eldodebug.soar.management.notification;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.language.TranslateText;
 
 public class NotificationManager {

@@ -6,7 +6,7 @@ import me.eldodebug.soar.gui.modmenu.category.impl.setting.impl.AboutScene;
 import me.eldodebug.soar.gui.modmenu.category.impl.setting.impl.GeneralScene;
 import org.lwjgl.input.Keyboard;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.modmenu.GuiModMenu;
 import me.eldodebug.soar.gui.modmenu.category.Category;
 import me.eldodebug.soar.gui.modmenu.category.impl.setting.SettingScene;

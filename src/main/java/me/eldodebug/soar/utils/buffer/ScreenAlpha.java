@@ -9,7 +9,7 @@ import org.lwjgl.nanovg.NanoVGGL2;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl3.BufferUtils;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import net.minecraft.client.Minecraft;
 

@@ -13,7 +13,7 @@ import me.eldodebug.soar.management.nanovg.font.Icons;
 import me.eldodebug.soar.utils.file.FileUtils;
 import org.lwjgl.input.Keyboard;
 
-import me.eldodebug.soar.Glide;
+import com.glideclient.Glide;
 import me.eldodebug.soar.gui.GuiEditHUD;
 import me.eldodebug.soar.gui.modmenu.category.Category;
 import me.eldodebug.soar.management.color.AccentColor;
