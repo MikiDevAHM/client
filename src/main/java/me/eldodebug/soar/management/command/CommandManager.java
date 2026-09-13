@@ -2,7 +2,7 @@ package me.eldodebug.soar.management.command;
 
 import java.util.ArrayList;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.command.impl.ScreenshotCommand;
 import me.eldodebug.soar.management.command.impl.TranslateCommand;
 import me.eldodebug.soar.management.event.EventTarget;

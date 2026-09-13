@@ -6,7 +6,7 @@ import java.util.Iterator;
 import me.eldodebug.soar.management.nanovg.font.Icons;
 import org.lwjgl.opengl.GL11;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.color.AccentColor;
 import me.eldodebug.soar.management.event.EventTarget;
 import me.eldodebug.soar.management.event.impl.EventRender3D;

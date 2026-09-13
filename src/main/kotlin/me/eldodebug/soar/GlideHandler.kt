@@ -1,4 +1,4 @@
-package com.glideclient
+package me.eldodebug.soar
 
 import me.eldodebug.soar.management.event.impl.*
 import org.apache.commons.lang3.StringUtils

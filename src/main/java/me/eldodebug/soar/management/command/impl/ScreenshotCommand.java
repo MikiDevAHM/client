@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.command.Command;
 import me.eldodebug.soar.management.file.FileManager;
 import me.eldodebug.soar.utils.transferable.FileTransferable;

@@ -5,7 +5,7 @@ import java.io.File;
 
 import org.lwjgl.input.Keyboard;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.modmenu.GuiModMenu;
 import me.eldodebug.soar.gui.modmenu.category.Category;
 import me.eldodebug.soar.management.color.AccentColor;

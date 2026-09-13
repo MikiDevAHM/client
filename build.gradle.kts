@@ -10,6 +10,7 @@ plugins {
     alias(libs.plugins.forge.gradle)
     alias(libs.plugins.mixin.gradle)
     alias(libs.plugins.shadow)
+    // kotlin("kapt") version "2.3.10" //FOR SOME REASON THIS SH*T BREAKS REOBFJAR TASK
 }
 
 base {
@@ -110,6 +111,7 @@ dependencies {
     embed("com.github.oshi:oshi-core:6.9.0") {
         exclude(module = "slf4j-api")
     }
+    testImplementation(kotlin("test"))
 }
 
 mixin {
