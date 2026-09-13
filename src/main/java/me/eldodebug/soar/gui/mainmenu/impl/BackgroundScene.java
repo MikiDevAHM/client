@@ -13,7 +13,7 @@ import me.eldodebug.soar.utils.animation.normal.easing.EaseInOutCirc;
 import me.eldodebug.soar.utils.buffer.ScreenAnimation;
 import org.lwjgl.input.Keyboard;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.gui.mainmenu.GuiGlideMainMenu;
 import me.eldodebug.soar.gui.mainmenu.MainMenuScene;
 import me.eldodebug.soar.management.color.palette.ColorPalette;

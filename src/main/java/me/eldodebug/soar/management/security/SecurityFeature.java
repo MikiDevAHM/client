@@ -1,6 +1,6 @@
 package me.eldodebug.soar.management.security;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 
 public class SecurityFeature {
 

@@ -2,7 +2,7 @@ package me.eldodebug.soar.ui.comp.impl.field;
 
 import java.awt.Color;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.management.nanovg.NanoVGManager;
 import me.eldodebug.soar.management.nanovg.font.Fonts;
 import me.eldodebug.soar.utils.ColorUtils;

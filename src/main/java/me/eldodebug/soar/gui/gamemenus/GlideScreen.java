@@ -1,6 +1,6 @@
 package me.eldodebug.soar.gui.gamemenus;
 
-import com.glideclient.Glide;
+import me.eldodebug.soar.Glide;
 import me.eldodebug.soar.utils.animation.simple.SimpleAnimation;
 import net.minecraft.client.Minecraft;
 

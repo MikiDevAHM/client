@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.glideclient.GlideMeta;
+import me.eldodebug.soar.GlideMeta;
 import me.eldodebug.soar.utils.JsonUtils;
 import me.eldodebug.soar.utils.Multithreading;
 import me.eldodebug.soar.utils.network.HttpUtils;
